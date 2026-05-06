@@ -183,57 +183,51 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
 }
 .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
 
-/* Hero compliance card */
-.hero-card {
-  background: rgba(248,244,236,0.97);
-  backdrop-filter: blur(16px);
+/* Hero visual card */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.hero-visual {
+  position: relative;
   border-radius: var(--r3);
-  padding: 32px;
+  overflow: hidden;
+  height: 440px;
   align-self: flex-end;
 }
-.hero-card-label {
-  font-size: 10px; font-weight: 700;
-  color: var(--green); letter-spacing: 0.18em; text-transform: uppercase;
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 24px;
+.hero-visual-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1670758566316-13ea9d10580d?auto=format&fit=crop&w=800&q=80');
+  background-size: cover; background-position: center;
 }
-.hero-card-label::before {
-  content: ''; display: block;
-  width: 8px; height: 8px;
+.hero-visual-photo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15,25,17,0.92) 0%,
+    rgba(15,25,17,0.38) 55%,
+    transparent 100%
+  );
+}
+.hero-visual-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  z-index: 2; padding: 32px;
+}
+.hero-visual-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700;
+  color: var(--sky); letter-spacing: 0.14em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero-visual-tag::before {
+  content: ''; width: 7px; height: 7px;
   background: var(--green); border-radius: 50%;
   animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
-.hero-stats {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 10px; margin-bottom: 20px;
-}
-.hero-stat {
-  background: var(--cream); border-radius: var(--r);
-  padding: 14px 16px;
-}
-.hero-stat-val {
+.hero-visual-quote {
   font-family: var(--font-serif);
-  font-size: 26px; font-weight: 600;
-  color: var(--navy); line-height: 1; margin-bottom: 4px;
+  font-size: 22px; font-weight: 300; font-style: italic;
+  color: var(--white); line-height: 1.45;
 }
-.hero-stat-label {
-  font-size: 10px; font-weight: 500;
-  color: var(--soft); line-height: 1.4;
-  text-transform: uppercase; letter-spacing: 0.06em;
-}
-.hero-regs { display: flex; flex-direction: column; gap: 8px; }
-.hero-reg {
-  display: flex; align-items: center; gap: 10px;
-  padding: 9px 12px; background: var(--cream); border-radius: 8px;
-}
-.hero-reg-badge {
-  font-family: var(--font-mono);
-  font-size: 10px; font-weight: 500;
-  color: var(--white); background: var(--navy);
-  padding: 3px 8px; border-radius: 4px; white-space: nowrap;
-}
-.hero-reg-text { font-size: 12px; color: var(--mid); }
 
 /* ─── TICKER ─── */
 .ticker {
@@ -675,7 +669,7 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-card { display: none; }
+  .hero-visual { display: none; }
   .num-grid { grid-template-columns: repeat(2,1fr); }
   .how-grid { grid-template-columns: 1fr; }
   .how-card { border-right: none; border-bottom: 1px solid var(--sand); }
@@ -737,35 +731,11 @@ footer {
       </div>
     </div>
 
-    <div class="hero-card">
-      <div class="hero-card-label">EUDR Deadline Active</div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-val">30 Dec</div>
-          <div class="hero-stat-label">2026 deadline<br>large operators</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-val">%</div>
-          <div class="hero-stat-label">data revenue<br>to producers</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-val">16</div>
-          <div class="hero-stat-label">CDAR fields<br>per farm</div>
-        </div>
-      </div>
-      <div class="hero-regs">
-        <div class="hero-reg">
-          <span class="hero-reg-badge">EUDR 2023/1115</span>
-          <span class="hero-reg-text">Anti-deforestation · Dec 2026</span>
-        </div>
-        <div class="hero-reg">
-          <span class="hero-reg-badge">CSRD 2022/2464</span>
-          <span class="hero-reg-text">ESG Reporting · Scope 3</span>
-        </div>
-        <div class="hero-reg">
-          <span class="hero-reg-badge">LkSG</span>
-          <span class="hero-reg-text">German Due Diligence · DACH</span>
-        </div>
+    <div class="hero-visual">
+      <div class="hero-visual-photo"></div>
+      <div class="hero-visual-body">
+        <div class="hero-visual-tag">Verified at origin</div>
+        <p class="hero-visual-quote">"From harvest to compliance package — traceable, dignified, yours."</p>
       </div>
     </div>
   </div>
