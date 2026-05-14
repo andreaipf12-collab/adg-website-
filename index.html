@@ -659,6 +659,24 @@ footer {
 .footer-brand strong { font-style: normal; color: rgba(255,255,255,0.6); font-weight: 400; }
 .footer-legal { font-size: 12px; color: rgba(255,255,255,0.2); }
 
+/* ─── LANG SWITCHER ─── */
+.lang-switcher {
+  display: flex; align-items: center; gap: 2px; margin-left: 12px;
+}
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.45);
+  background: none; border: none; cursor: pointer;
+  padding: 5px 8px; border-radius: 6px;
+  transition: color 0.2s, background 0.2s; text-transform: uppercase;
+}
+.lang-btn:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.lang-btn.active { color: var(--white); background: rgba(255,255,255,0.14); }
+nav.scrolled .lang-btn { color: var(--mid); }
+nav.scrolled .lang-btn:hover,
+nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
+
 /* ─── REVEAL ─── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -699,13 +717,18 @@ footer {
     <span class="adg-sub">AgroDignity Global</span>
   </div>
   <ul class="nav-links">
-    <li><a href="#how">How it works</a></li>
-    <li><a href="#buyers">For buyers</a></li>
-    <li><a href="#producers">For producers</a></li>
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#contact" class="nav-cta">Get started</a></li>
+    <li><a href="#how" data-i18n="nav.how">How it works</a></li>
+    <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
+    <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
+    <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+    <li><a href="#team" data-i18n="nav.team">Team</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Get started</a></li>
   </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+  </div>
 </nav>
 
 <!-- ══ HERO ══ -->
@@ -715,27 +738,27 @@ footer {
     <div class="hero-text">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-line"></div>
-        <span>Farm data compliance · Global South to Europe</span>
+        <span data-i18n="hero.eyebrow">Farm data compliance · Global South to Europe</span>
       </div>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-i18n-html="hero.title">
         Farm data<br>
         <em>with dignity.</em>
         <strong>Verified at origin.</strong>
       </h1>
-      <p class="hero-body">
+      <p class="hero-body" data-i18n="hero.body">
         We connect smallholder producers and cooperatives from the Global South with European importers — delivering verified farm data that satisfies EUDR, CSRD, and LkSG. The only platform designed to return data value back to the producers who generate it.
       </p>
       <div class="hero-actions">
-        <a href="#buyers" class="btn btn-green">Get compliance ready ↗</a>
-        <a href="#how" class="btn btn-ghost">See how it works</a>
+        <a href="#buyers" class="btn btn-green" data-i18n="hero.btn1">Get compliance ready ↗</a>
+        <a href="#how" class="btn btn-ghost" data-i18n="hero.btn2">See how it works</a>
       </div>
     </div>
 
     <div class="hero-visual">
       <div class="hero-visual-photo"></div>
       <div class="hero-visual-body">
-        <div class="hero-visual-tag">Verified at origin</div>
-        <p class="hero-visual-quote">"From harvest to compliance package — traceable, dignified, yours."</p>
+        <div class="hero-visual-tag" data-i18n="hero.visual.tag">Verified at origin</div>
+        <p class="hero-visual-quote" data-i18n="hero.visual.quote">"From harvest to compliance package — traceable, dignified, yours."</p>
       </div>
     </div>
   </div>
@@ -747,14 +770,14 @@ footer {
     <span class="ticker-item">EUDR · <span class="accent">Dec 30, 2026</span></span>
     <span class="ticker-item">CSRD · <span class="accent">Scope 3 supply chain</span></span>
     <span class="ticker-item">LkSG · <span class="accent">DACH importers</span></span>
-    <span class="ticker-item">Revenue to producers · <span class="accent">Data with Dignity</span></span>
+    <span class="ticker-item" data-i18n-html="ticker.rev"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
     <span class="ticker-item">GPS polygon · Satellite verified · <span class="accent">SHA-256 audit trail</span></span>
     <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
     <!-- repeat for seamless loop -->
     <span class="ticker-item">EUDR · <span class="accent">Dec 30, 2026</span></span>
     <span class="ticker-item">CSRD · <span class="accent">Scope 3 supply chain</span></span>
     <span class="ticker-item">LkSG · <span class="accent">DACH importers</span></span>
-    <span class="ticker-item">Revenue to producers · <span class="accent">Data with Dignity</span></span>
+    <span class="ticker-item" data-i18n-html="ticker.rev"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
     <span class="ticker-item">GPS polygon · Satellite verified · <span class="accent">SHA-256 audit trail</span></span>
     <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
   </div>
@@ -763,25 +786,25 @@ footer {
 <!-- ══ NUMBERS ══ -->
 <section class="numbers-section">
   <div class="numbers-header reveal">
-    <h2 class="numbers-title">The scale<br>of <em>the challenge.</em></h2>
-    <p class="numbers-sub">500 million smallholder farmers. One regulation. One deadline. One platform built to bridge both worlds.</p>
+    <h2 class="numbers-title" data-i18n-html="numbers.title">The scale<br>of <em>the challenge.</em></h2>
+    <p class="numbers-sub" data-i18n="numbers.sub">500 million smallholder farmers. One regulation. One deadline. One platform built to bridge both worlds.</p>
   </div>
   <div class="num-grid">
     <div class="num-item reveal">
       <div class="num-val">500<span class="green">M+</span></div>
-      <div class="num-label">Smallholder farmers<br>in the Global South</div>
+      <div class="num-label" data-i18n-html="num.1">Smallholder farmers<br>in the Global South</div>
     </div>
     <div class="num-item reveal d1">
       <div class="num-val">Dec<br><span class="green">2026</span></div>
-      <div class="num-label">EUDR deadline<br>for large operators</div>
+      <div class="num-label" data-i18n-html="num.2">EUDR deadline<br>for large operators</div>
     </div>
     <div class="num-item reveal d2">
       <div class="num-val"><span class="green">3</span></div>
-      <div class="num-label">Regulations covered:<br>EUDR · CSRD · LkSG</div>
+      <div class="num-label" data-i18n-html="num.3">Regulations covered:<br>EUDR · CSRD · LkSG</div>
     </div>
     <div class="num-item reveal d3">
       <div class="num-val"><span class="green">16</span></div>
-      <div class="num-label">Verified data points<br>per farm — CDAR</div>
+      <div class="num-label" data-i18n-html="num.4">Verified data points<br>per farm — CDAR</div>
     </div>
   </div>
 </section>
@@ -789,9 +812,9 @@ footer {
 <!-- ══ HOW IT WORKS ══ -->
 <section class="how-section" id="how">
   <div class="container">
-    <div class="section-eyebrow reveal">How it works</div>
-    <h2 class="section-title reveal">Three steps.<br><em>One compliance package.</em></h2>
-    <p class="section-body reveal">From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.</p>
+    <div class="section-eyebrow reveal" data-i18n="how.eyebrow">How it works</div>
+    <h2 class="section-title reveal" data-i18n-html="how.title">Three steps.<br><em>One compliance package.</em></h2>
+    <p class="section-body reveal" data-i18n="how.body">From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.</p>
   </div>
   <div class="how-grid container">
     <div class="how-card reveal">
@@ -802,8 +825,8 @@ footer {
           <path d="M9 7h6M9 11h4"/>
         </svg>
       </div>
-      <h3 class="how-title">Capture in the field</h3>
-      <p class="how-body">Field technicians collect 16 CDAR data points per farm using our offline-capable mobile app. GPS polygon, labor indicators, FDRL consent — all in one visit.</p>
+      <h3 class="how-title" data-i18n="how.1.title">Capture in the field</h3>
+      <p class="how-body" data-i18n="how.1.body">Field technicians collect 16 CDAR data points per farm using our offline-capable mobile app. GPS polygon, labor indicators, FDRL consent — all in one visit.</p>
       <div class="how-tags">
         <span class="tag">GPS 6 decimals</span>
         <span class="tag">FDRL consent</span>
@@ -819,8 +842,8 @@ footer {
           <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
         </svg>
       </div>
-      <h3 class="how-title">Verify by satellite</h3>
-      <p class="how-body">Our pipeline cross-checks every farm polygon against Global Forest Watch Hansen GFC data. Post-2020 deforestation check. PASS / REVIEW / FAIL with SHA-256 audit trail.</p>
+      <h3 class="how-title" data-i18n="how.2.title">Verify by satellite</h3>
+      <p class="how-body" data-i18n="how.2.body">Our pipeline cross-checks every farm polygon against Global Forest Watch Hansen GFC data. Post-2020 deforestation check. PASS / REVIEW / FAIL with SHA-256 audit trail.</p>
       <div class="how-tags">
         <span class="tag">GFW Hansen GFC</span>
         <span class="tag">SHA-256 hash</span>
@@ -836,8 +859,8 @@ footer {
           <line x1="9" y1="17" x2="13" y2="17"/>
         </svg>
       </div>
-      <h3 class="how-title">Deliver the package</h3>
-      <p class="how-body">A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance (FDRL). Ready to submit in EU TRACES NT.</p>
+      <h3 class="how-title" data-i18n="how.3.title">Deliver the package</h3>
+      <p class="how-body" data-i18n="how.3.body">A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance (FDRL). Ready to submit in EU TRACES NT.</p>
       <div class="how-tags">
         <span class="tag">DDS-ready</span>
         <span class="tag">TRACES NT</span>
@@ -851,10 +874,10 @@ footer {
 <section class="buyers-section" id="buyers">
   <div class="buyers-inner">
     <div>
-      <div class="section-eyebrow sky reveal">For European importers</div>
-      <h2 class="section-title on-dark reveal">Your supply chain.<br><em>Fully documented.</em></h2>
-      <p class="section-body on-dark reveal">EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm — at 40% below the Amsterdam market benchmark.</p>
-      <a href="#contact" class="btn btn-cream reveal" style="margin-top:8px">Request a demo ↗</a>
+      <div class="section-eyebrow sky reveal" data-i18n="buyers.eyebrow">For European importers</div>
+      <h2 class="section-title on-dark reveal" data-i18n-html="buyers.title">Your supply chain.<br><em>Fully documented.</em></h2>
+      <p class="section-body on-dark reveal" data-i18n="buyers.body">EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm — at 40% below the Amsterdam market benchmark.</p>
+      <a href="#contact" class="btn btn-cream reveal" style="margin-top:8px" data-i18n="buyers.cta">Request a demo ↗</a>
     </div>
     <div class="product-cards">
       <div class="product-card reveal">
@@ -864,8 +887,8 @@ footer {
           </svg>
         </div>
         <div>
-          <div class="product-name">EUDR Compliance Package</div>
-          <div class="product-desc">GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.</div>
+          <div class="product-name" data-i18n="product.1.name">EUDR Compliance Package</div>
+          <div class="product-desc" data-i18n="product.1.desc">GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.</div>
           <div class="product-reg">EUDR 2023/1115 · Art. 4 + Art. 9</div>
         </div>
       </div>
@@ -877,8 +900,8 @@ footer {
           </svg>
         </div>
         <div>
-          <div class="product-name">ESG Score per Farm</div>
-          <div class="product-desc">Three-pillar ESG score: Environmental, Social, Governance. Satisfies CSRD Scope 3 reporting for your supply chain.</div>
+          <div class="product-name" data-i18n="product.2.name">ESG Score per Farm</div>
+          <div class="product-desc" data-i18n="product.2.desc">Three-pillar ESG score: Environmental, Social, Governance. Satisfies CSRD Scope 3 reporting for your supply chain.</div>
           <div class="product-reg">CSRD 2022/2464 · ESRS S2 + E1</div>
         </div>
       </div>
@@ -889,8 +912,8 @@ footer {
           </svg>
         </div>
         <div>
-          <div class="product-name">Due Diligence Data Pack</div>
-          <div class="product-desc">Labor indicators, child labor certification, land tenure verification. Ready for LkSG and CSDDD audit requirements.</div>
+          <div class="product-name" data-i18n="product.3.name">Due Diligence Data Pack</div>
+          <div class="product-desc" data-i18n="product.3.desc">Labor indicators, child labor certification, land tenure verification. Ready for LkSG and CSDDD audit requirements.</div>
           <div class="product-reg">LkSG §5 · CSDDD Art. 6</div>
         </div>
       </div>
@@ -903,7 +926,7 @@ footer {
   <div class="producers-hero">
     <div class="producers-photo"></div>
     <div class="producers-quote-wrap">
-      <p class="producers-quote">
+      <p class="producers-quote" data-i18n-html="producers.quote">
         "Dignity is the freedom to act,<br>
         the right to be <em>recognized,</em><br>
         and the equality shared by every human being."
@@ -913,31 +936,31 @@ footer {
 
   <div class="producers-body">
     <div>
-      <div class="section-eyebrow reveal">For producers</div>
-      <h2 class="section-title reveal">Your data.<br><em>Your value.</em></h2>
-      <p class="producers-text reveal">AgroDignity is the only platform that routes data revenue directly back to the producer. 90% of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.</p>
-      <a href="#contact" class="btn btn-outline-navy reveal" style="margin-top:8px">Talk to us ↗</a>
+      <div class="section-eyebrow reveal" data-i18n="producers.eyebrow">For producers</div>
+      <h2 class="section-title reveal" data-i18n-html="producers.title">Your data.<br><em>Your value.</em></h2>
+      <p class="producers-text reveal" data-i18n="producers.body">AgroDignity is the only platform that routes data revenue directly back to the producer. 90% of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.</p>
+      <a href="#contact" class="btn btn-outline-navy reveal" style="margin-top:8px" data-i18n="producers.cta">Talk to us ↗</a>
     </div>
     <div class="producers-points">
       <div class="producer-point reveal">
         <div class="pp-num">01</div>
         <div>
-          <div class="pp-title">One visit. All data captured.</div>
-          <div class="pp-body">A field technician visits once. All 16 data points are collected in a single offline form — no paperwork, no repetition, no multiple visits disrupting your work.</div>
+          <div class="pp-title" data-i18n="pp.1.title">One visit. All data captured.</div>
+          <div class="pp-body" data-i18n="pp.1.body">A field technician visits once. All 16 data points are collected in a single offline form — no paperwork, no repetition, no multiple visits disrupting your work.</div>
         </div>
       </div>
       <div class="producer-point reveal d1">
         <div class="pp-num">02</div>
         <div>
-          <div class="pp-title">You own your data</div>
-          <div class="pp-body">Producers retain full control over their information and can withdraw consent at any time. Data sovereignty is built into the platform — not an afterthought.</div>
+          <div class="pp-title" data-i18n="pp.2.title">You own your data</div>
+          <div class="pp-body" data-i18n="pp.2.body">Producers retain full control over their information and can withdraw consent at any time. Data sovereignty is built into the platform — not an afterthought.</div>
         </div>
       </div>
       <div class="producer-point reveal d2">
         <div class="pp-num">03</div>
         <div>
-          <div class="pp-title">Data revenue returns to the producer</div>
-          <div class="pp-body">A share of every data transaction goes directly back to the producer who generated it. No intermediaries extracting value from the source.</div>
+          <div class="pp-title" data-i18n="pp.3.title">Data revenue returns to the producer</div>
+          <div class="pp-body" data-i18n="pp.3.body">A share of every data transaction goes directly back to the producer who generated it. No intermediaries extracting value from the source.</div>
         </div>
       </div>
     </div>
@@ -948,7 +971,7 @@ footer {
 <div class="photo-break">
   <div class="photo-break-bg"></div>
   <div class="photo-break-inner">
-    <p class="photo-break-quote">
+    <p class="photo-break-quote" data-i18n-html="photobreak.quote">
       "The value of data should flow<br>
       in the same direction as the goods —<br>
       <em>back to where it began.</em>"
@@ -959,21 +982,21 @@ footer {
 <!-- ══ MISSION / VALUES ══ -->
 <section class="mission-section" id="mission">
   <div class="mission-inner">
-    <div class="section-eyebrow reveal">Mission · Vision · Values</div>
-    <h2 class="section-title reveal">What we stand for.<br><em>Why it matters.</em></h2>
+    <div class="section-eyebrow reveal" data-i18n="mission.eyebrow">Mission · Vision · Values</div>
+    <h2 class="section-title reveal" data-i18n-html="mission.title">What we stand for.<br><em>Why it matters.</em></h2>
 
     <div class="mv-grid">
       <div class="mv-card reveal">
-        <div class="mv-label">Mission</div>
-        <div class="mv-text">We bridge knowledge and communication between actors in the global food system — generating the capabilities for each actor to manage their own decisions and direct their own future through access to information and technology.</div>
+        <div class="mv-label" data-i18n="mission.label">Mission</div>
+        <div class="mv-text" data-i18n="mission.text">We bridge knowledge and communication between actors in the global food system — generating the capabilities for each actor to manage their own decisions and direct their own future through access to information and technology.</div>
       </div>
       <div class="mv-card reveal d1">
-        <div class="mv-label">Vision</div>
-        <div class="mv-text">To be the pioneers in designing accessible systems where data from food systems generates value from its origin — returning that value to the people who created it.</div>
+        <div class="mv-label" data-i18n="vision.label">Vision</div>
+        <div class="mv-text" data-i18n="vision.text">To be the pioneers in designing accessible systems where data from food systems generates value from its origin — returning that value to the people who created it.</div>
       </div>
     </div>
 
-    <h3 class="section-title values-title reveal">Five values.<br><em>One commitment.</em></h3>
+    <h3 class="section-title values-title reveal" data-i18n-html="values.title">Five values.<br><em>One commitment.</em></h3>
     <div class="values-grid">
       <div class="value-card reveal">
         <div class="value-bar"></div>
@@ -983,8 +1006,8 @@ footer {
             <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
           </svg>
         </div>
-        <div class="value-name">Dignity</div>
-        <div class="value-desc">The capacity of every actor in the food system to manage their own decisions — with access to the knowledge, information and technology that make it possible.</div>
+        <div class="value-name" data-i18n="value.1.name">Dignity</div>
+        <div class="value-desc" data-i18n="value.1.desc">The capacity of every actor in the food system to manage their own decisions — with access to the knowledge, information and technology that make it possible.</div>
       </div>
       <div class="value-card reveal d1">
         <div class="value-bar"></div>
@@ -994,8 +1017,8 @@ footer {
             <circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/>
           </svg>
         </div>
-        <div class="value-name">Equity</div>
-        <div class="value-desc">Universal access to knowledge, information and technology — regardless of farm size or where in the world the producer is located.</div>
+        <div class="value-name" data-i18n="value.2.name">Equity</div>
+        <div class="value-desc" data-i18n="value.2.desc">Universal access to knowledge, information and technology — regardless of farm size or where in the world the producer is located.</div>
       </div>
       <div class="value-card reveal d2">
         <div class="value-bar"></div>
@@ -1005,8 +1028,8 @@ footer {
             <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/>
           </svg>
         </div>
-        <div class="value-name">Commitment</div>
-        <div class="value-desc">Building redistributive mechanisms within the data economy of food systems — ensuring that the value data generates returns to its origin.</div>
+        <div class="value-name" data-i18n="value.3.name">Commitment</div>
+        <div class="value-desc" data-i18n="value.3.desc">Building redistributive mechanisms within the data economy of food systems — ensuring that the value data generates returns to its origin.</div>
       </div>
       <div class="value-card reveal d3">
         <div class="value-bar"></div>
@@ -1017,8 +1040,8 @@ footer {
             <circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
-        <div class="value-name">Transparency</div>
-        <div class="value-desc">Every data point, every transaction, every decision is traceable and verifiable. No black boxes. What we say can be audited.</div>
+        <div class="value-name" data-i18n="value.4.name">Transparency</div>
+        <div class="value-desc" data-i18n="value.4.desc">Every data point, every transaction, every decision is traceable and verifiable. No black boxes. What we say can be audited.</div>
       </div>
       <div class="value-card reveal">
         <div class="value-bar"></div>
@@ -1028,8 +1051,8 @@ footer {
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <div class="value-name">Trust</div>
-        <div class="value-desc">Built through clear communication and verifiable evidence — not promises. Every result is communicated openly to all actors involved.</div>
+        <div class="value-name" data-i18n="value.5.name">Trust</div>
+        <div class="value-desc" data-i18n="value.5.desc">Built through clear communication and verifiable evidence — not promises. Every result is communicated openly to all actors involved.</div>
       </div>
     </div>
   </div>
@@ -1038,8 +1061,8 @@ footer {
 <!-- ══ TEAM ══ -->
 <section class="team-section" id="team">
   <div class="container">
-    <div class="section-eyebrow reveal">The team</div>
-    <h2 class="section-title reveal">Built by people who know<br><em>the field and the regulation.</em></h2>
+    <div class="section-eyebrow reveal" data-i18n="team.eyebrow">The team</div>
+    <h2 class="section-title reveal" data-i18n-html="team.title">Built by people who know<br><em>the field and the regulation.</em></h2>
   </div>
   <div class="team-grid container">
     <div class="team-card reveal">
@@ -1049,7 +1072,7 @@ footer {
         <div class="team-role">CEO · Chief Executive Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc">International food law · Agricultural policy · FAO</p>
+        <p class="team-desc" data-i18n="team.1.desc">International food law · Agricultural policy · FAO</p>
       </div>
     </div>
     <div class="team-card reveal d1">
@@ -1059,7 +1082,7 @@ footer {
         <div class="team-role">CTO · Chief Technology Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc">Data Anlaysis· Technological Setup · FAO Rome</p>
+        <p class="team-desc" data-i18n="team.2.desc">Data Analysis · Technological Setup · FAO Rome</p>
       </div>
     </div>
     <div class="team-card reveal d2">
@@ -1069,7 +1092,7 @@ footer {
         <div class="team-role">COO · Chief Operating Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc">Agri-food systems· Sustainable markets · Trieste, Italy</p>
+        <p class="team-desc" data-i18n="team.3.desc">Agri-food systems · Sustainable markets · Trieste, Italy</p>
       </div>
     </div>
   </div>
@@ -1079,39 +1102,275 @@ footer {
 <section class="contact-section" id="contact">
   <div class="contact-photo"></div>
   <div class="contact-inner">
-    <div class="contact-eyebrow">Get started</div>
-    <h2 class="contact-title">Ready to be<br>EUDR compliant?</h2>
-    <p class="contact-body">December 30, 2026 is closer than it looks. Let's make sure your supply chain is documented and verified before the deadline.</p>
+    <div class="contact-eyebrow" data-i18n="contact.eyebrow">Get started</div>
+    <h2 class="contact-title" data-i18n-html="contact.title">Ready to be<br>EUDR compliant?</h2>
+    <p class="contact-body" data-i18n="contact.body">December 30, 2026 is closer than it looks. Let's make sure your supply chain is documented and verified before the deadline.</p>
     <div class="contact-actions">
-      <a href="mailto:info@agrodignity.com" class="btn btn-green">Contact us ↗</a>
-      <a href="#how" class="btn btn-ghost">Learn more</a>
+      <a href="mailto:info@agrodignity.com" class="btn btn-green" data-i18n="contact.btn1">Contact us ↗</a>
+      <a href="#how" class="btn btn-ghost" data-i18n="contact.btn2">Learn more</a>
     </div>
-    <div class="contact-meta">Trieste, Italy &nbsp;·&nbsp; Roma, Italy &nbsp;·&nbsp; Tegucigalpa, Honduras</div>
+    <div class="contact-meta" data-i18n="contact.meta">Trieste, Italy &nbsp;·&nbsp; Roma, Italy &nbsp;·&nbsp; Tegucigalpa, Honduras</div>
   </div>
 </section>
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <div class="footer-brand"><strong>AgroDignity</strong> — El valor de los datos, de vuelta a su origen </div>
-  <div class="footer-legal">© 2026 AgroDignity Initiative · All rights reserved </div>
+  <div class="footer-brand"><strong>AgroDignity</strong> — <span data-i18n="footer.tagline">El valor de los datos, de vuelta a su origen</span></div>
+  <div class="footer-legal" data-i18n="footer.legal">© 2026 AgroDignity Initiative · All rights reserved</div>
 </footer>
 
 <script>
+/* ── NAV SCROLL ── */
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
+/* ── REVEAL ON SCROLL ── */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ── TRANSLATIONS ── */
+const translations = {
+  en: {
+    'nav.how':'How it works','nav.buyers':'For buyers','nav.producers':'For producers',
+    'nav.mission':'Mission','nav.team':'Team','nav.cta':'Get started',
+    'hero.eyebrow':'Farm data compliance · Global South to Europe',
+    'hero.title':'Farm data<br><em>with dignity.</em><strong>Verified at origin.</strong>',
+    'hero.body':'We connect smallholder producers and cooperatives from the Global South with European importers — delivering verified farm data that satisfies EUDR, CSRD, and LkSG. The only platform designed to return data value back to the producers who generate it.',
+    'hero.btn1':'Get compliance ready ↗','hero.btn2':'See how it works',
+    'hero.visual.tag':'Verified at origin',
+    'hero.visual.quote':'"From harvest to compliance package — traceable, dignified, yours."',
+    'ticker.rev':'Revenue to producers · <span class="accent">Data with Dignity</span>',
+    'numbers.title':'The scale<br>of <em>the challenge.</em>',
+    'numbers.sub':'500 million smallholder farmers. One regulation. One deadline. One platform built to bridge both worlds.',
+    'num.1':'Smallholder farmers<br>in the Global South','num.2':'EUDR deadline<br>for large operators',
+    'num.3':'Regulations covered:<br>EUDR · CSRD · LkSG','num.4':'Verified data points<br>per farm — CDAR',
+    'how.eyebrow':'How it works',
+    'how.title':'Three steps.<br><em>One compliance package.</em>',
+    'how.body':'From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.',
+    'how.1.title':'Capture in the field',
+    'how.1.body':'Field technicians collect 16 CDAR data points per farm using our offline-capable mobile app. GPS polygon, labor indicators, FDRL consent — all in one visit.',
+    'how.2.title':'Verify by satellite',
+    'how.2.body':'Our pipeline cross-checks every farm polygon against Global Forest Watch Hansen GFC data. Post-2020 deforestation check. PASS / REVIEW / FAIL with SHA-256 audit trail.',
+    'how.3.title':'Deliver the package',
+    'how.3.body':'A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance (FDRL). Ready to submit in EU TRACES NT.',
+    'buyers.eyebrow':'For European importers',
+    'buyers.title':'Your supply chain.<br><em>Fully documented.</em>',
+    'buyers.body':'EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm — at 40% below the Amsterdam market benchmark.',
+    'buyers.cta':'Request a demo ↗',
+    'product.1.name':'EUDR Compliance Package',
+    'product.1.desc':'GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.',
+    'product.2.name':'ESG Score per Farm',
+    'product.2.desc':'Three-pillar ESG score: Environmental, Social, Governance. Satisfies CSRD Scope 3 reporting for your supply chain.',
+    'product.3.name':'Due Diligence Data Pack',
+    'product.3.desc':'Labor indicators, child labor certification, land tenure verification. Ready for LkSG and CSDDD audit requirements.',
+    'producers.quote':'"Dignity is the freedom to act,<br>the right to be <em>recognized,</em><br>and the equality shared by every human being."',
+    'producers.eyebrow':'For producers',
+    'producers.title':'Your data.<br><em>Your value.</em>',
+    'producers.body':'AgroDignity is the only platform that routes data revenue directly back to the producer. 90% of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.',
+    'producers.cta':'Talk to us ↗',
+    'pp.1.title':'One visit. All data captured.',
+    'pp.1.body':'A field technician visits once. All 16 data points are collected in a single offline form — no paperwork, no repetition, no multiple visits disrupting your work.',
+    'pp.2.title':'You own your data',
+    'pp.2.body':'Producers retain full control over their information and can withdraw consent at any time. Data sovereignty is built into the platform — not an afterthought.',
+    'pp.3.title':'Data revenue returns to the producer',
+    'pp.3.body':'A share of every data transaction goes directly back to the producer who generated it. No intermediaries extracting value from the source.',
+    'photobreak.quote':'"The value of data should flow<br>in the same direction as the goods —<br><em>back to where it began.</em>"',
+    'mission.eyebrow':'Mission · Vision · Values',
+    'mission.title':'What we stand for.<br><em>Why it matters.</em>',
+    'mission.label':'Mission',
+    'mission.text':'We bridge knowledge and communication between actors in the global food system — generating the capabilities for each actor to manage their own decisions and direct their own future through access to information and technology.',
+    'vision.label':'Vision',
+    'vision.text':'To be the pioneers in designing accessible systems where data from food systems generates value from its origin — returning that value to the people who created it.',
+    'values.title':'Five values.<br><em>One commitment.</em>',
+    'value.1.name':'Dignity','value.1.desc':'The capacity of every actor in the food system to manage their own decisions — with access to the knowledge, information and technology that make it possible.',
+    'value.2.name':'Equity','value.2.desc':'Universal access to knowledge, information and technology — regardless of farm size or where in the world the producer is located.',
+    'value.3.name':'Commitment','value.3.desc':'Building redistributive mechanisms within the data economy of food systems — ensuring that the value data generates returns to its origin.',
+    'value.4.name':'Transparency','value.4.desc':'Every data point, every transaction, every decision is traceable and verifiable. No black boxes. What we say can be audited.',
+    'value.5.name':'Trust','value.5.desc':'Built through clear communication and verifiable evidence — not promises. Every result is communicated openly to all actors involved.',
+    'team.eyebrow':'The team',
+    'team.title':'Built by people who know<br><em>the field and the regulation.</em>',
+    'team.1.desc':'International food law · Agricultural policy · FAO',
+    'team.2.desc':'Data Analysis · Technological Setup · FAO Rome',
+    'team.3.desc':'Agri-food systems · Sustainable markets · Trieste, Italy',
+    'contact.eyebrow':'Get started',
+    'contact.title':'Ready to be<br>EUDR compliant?',
+    'contact.body':'December 30, 2026 is closer than it looks. Let\'s make sure your supply chain is documented and verified before the deadline.',
+    'contact.btn1':'Contact us ↗','contact.btn2':'Learn more',
+    'contact.meta':'Trieste, Italy · Roma, Italy · Tegucigalpa, Honduras',
+    'footer.tagline':'El valor de los datos, de vuelta a su origen',
+    'footer.legal':'© 2026 AgroDignity Initiative · All rights reserved'
+  },
+  es: {
+    'nav.how':'Cómo funciona','nav.buyers':'Para compradores','nav.producers':'Para productores',
+    'nav.mission':'Misión','nav.team':'Equipo','nav.cta':'Comenzar',
+    'hero.eyebrow':'Cumplimiento de datos agrícolas · Sur Global a Europa',
+    'hero.title':'Datos del campo<br><em>con dignidad.</em><strong>Verificados en origen.</strong>',
+    'hero.body':'Conectamos a pequeños productores y cooperativas del Sur Global con importadores europeos — entregando datos agrícolas verificados que satisfacen EUDR, CSRD y LkSG. La única plataforma diseñada para devolver el valor de los datos a los productores que los generan.',
+    'hero.btn1':'Cumple hoy ↗','hero.btn2':'Ver cómo funciona',
+    'hero.visual.tag':'Verificado en origen',
+    'hero.visual.quote':'"De la cosecha al paquete de cumplimiento — trazable, digno, tuyo."',
+    'ticker.rev':'Ingresos para productores · <span class="accent">Datos con Dignidad</span>',
+    'numbers.title':'La escala<br>del <em>desafío.</em>',
+    'numbers.sub':'500 millones de pequeños agricultores. Una regulación. Un plazo. Una plataforma construida para conectar ambos mundos.',
+    'num.1':'Pequeños agricultores<br>en el Sur Global','num.2':'Plazo EUDR<br>para grandes operadores',
+    'num.3':'Regulaciones cubiertas:<br>EUDR · CSRD · LkSG','num.4':'Puntos de datos verificados<br>por finca — CDAR',
+    'how.eyebrow':'Cómo funciona',
+    'how.title':'Tres pasos.<br><em>Un paquete de cumplimiento.</em>',
+    'how.body':'Desde la captura GPS en el campo hasta un PDF listo para DDS en tu solicitud europea — totalmente automatizado, verificado por satélite.',
+    'how.1.title':'Captura en el campo',
+    'how.1.body':'Los técnicos de campo recopilan 16 puntos de datos CDAR por finca con nuestra app móvil sin conexión. Polígono GPS, indicadores laborales, consentimiento FDRL — todo en una visita.',
+    'how.2.title':'Verificación por satélite',
+    'how.2.body':'Nuestro sistema verifica cada polígono de finca con datos Hansen GFC de Global Forest Watch. Control de deforestación post-2020. APROBADO / REVISIÓN / RECHAZADO con trazabilidad SHA-256.',
+    'how.3.title':'Entrega del paquete',
+    'how.3.body':'Un PDF listo para DDS con los tres pilares ESG: Ambiental (EUDR), Social (LkSG/CSRD), Gobernanza (FDRL). Listo para enviar en EU TRACES NT.',
+    'buyers.eyebrow':'Para importadores europeos',
+    'buyers.title':'Tu cadena de suministro.<br><em>Completamente documentada.</em>',
+    'buyers.body':'La EUDR exige datos de geolocalización y deforestación verificados para cada finca en tu cadena de suministro. Entregamos un paquete de cumplimiento completo por finca — un 40% por debajo del precio del mercado de Ámsterdam.',
+    'buyers.cta':'Solicitar una demo ↗',
+    'product.1.name':'Paquete de Cumplimiento EUDR',
+    'product.1.desc':'Polígono GPS + verificación de deforestación + PDF listo para DDS. Todo lo que la regulación exige, verificado por satélite.',
+    'product.2.name':'Puntuación ESG por Finca',
+    'product.2.desc':'Puntuación ESG de tres pilares: Ambiental, Social, Gobernanza. Cumple con el Alcance 3 de CSRD para tu cadena de suministro.',
+    'product.3.name':'Paquete de Datos de Debida Diligencia',
+    'product.3.desc':'Indicadores laborales, certificación de trabajo infantil, verificación de tenencia de tierra. Listo para los requisitos de auditoría LkSG y CSDDD.',
+    'producers.quote':'"La dignidad es la libertad de actuar,<br>el derecho a ser <em>reconocido,</em><br>y la igualdad que pertenece a todo ser humano."',
+    'producers.eyebrow':'Para productores',
+    'producers.title':'Tus datos.<br><em>Tu valor.</em>',
+    'producers.body':'AgroDignity es la única plataforma que canaliza los ingresos de datos directamente al productor. El 90% de lo que tus datos generan en los mercados europeos regresa a ti — la persona que los cultivó, los cuidó y lo hizo posible.',
+    'producers.cta':'Habla con nosotros ↗',
+    'pp.1.title':'Una visita. Todos los datos capturados.',
+    'pp.1.body':'Un técnico de campo visita una vez. Los 16 puntos de datos se recopilan en un formulario offline — sin papeleo, sin repetición, sin múltiples visitas que interrumpan tu trabajo.',
+    'pp.2.title':'Tú eres dueño de tus datos',
+    'pp.2.body':'Los productores mantienen el control total sobre su información y pueden retirar el consentimiento en cualquier momento. La soberanía de datos está integrada en la plataforma.',
+    'pp.3.title':'Los ingresos de datos regresan al productor',
+    'pp.3.body':'Una parte de cada transacción de datos va directamente al productor que los generó. Sin intermediarios que extraigan valor en el origen.',
+    'photobreak.quote':'"El valor de los datos debería fluir<br>en la misma dirección que los bienes —<br><em>de vuelta a donde comenzó.</em>"',
+    'mission.eyebrow':'Misión · Visión · Valores',
+    'mission.title':'Lo que defendemos.<br><em>Por qué importa.</em>',
+    'mission.label':'Misión',
+    'mission.text':'Tendemos puentes de conocimiento y comunicación entre los actores del sistema alimentario global — generando las capacidades para que cada actor gestione sus propias decisiones y dirija su propio futuro mediante el acceso a información y tecnología.',
+    'vision.label':'Visión',
+    'vision.text':'Ser los pioneros en el diseño de sistemas accesibles donde los datos de los sistemas alimentarios generen valor desde su origen — devolviendo ese valor a las personas que los crearon.',
+    'values.title':'Cinco valores.<br><em>Un compromiso.</em>',
+    'value.1.name':'Dignidad','value.1.desc':'La capacidad de cada actor en el sistema alimentario de gestionar sus propias decisiones — con acceso al conocimiento, la información y la tecnología que lo hacen posible.',
+    'value.2.name':'Equidad','value.2.desc':'Acceso universal al conocimiento, la información y la tecnología — independientemente del tamaño de la finca o de dónde esté el productor en el mundo.',
+    'value.3.name':'Compromiso','value.3.desc':'Construir mecanismos redistributivos dentro de la economía de datos de los sistemas alimentarios — asegurando que el valor que generan los datos regrese a su origen.',
+    'value.4.name':'Transparencia','value.4.desc':'Cada punto de datos, cada transacción, cada decisión es trazable y verificable. Sin cajas negras. Lo que decimos puede ser auditado.',
+    'value.5.name':'Confianza','value.5.desc':'Construida a través de comunicación clara y evidencia verificable — no promesas. Cada resultado se comunica abiertamente a todos los actores involucrados.',
+    'team.eyebrow':'El equipo',
+    'team.title':'Construido por personas que conocen<br><em>el campo y la regulación.</em>',
+    'team.1.desc':'Derecho alimentario internacional · Política agrícola · FAO',
+    'team.2.desc':'Análisis de datos · Configuración tecnológica · FAO Roma',
+    'team.3.desc':'Sistemas agroalimentarios · Mercados sostenibles · Trieste, Italia',
+    'contact.eyebrow':'Comenzar',
+    'contact.title':'¿Listo para cumplir<br>con la EUDR?',
+    'contact.body':'El 30 de diciembre de 2026 está más cerca de lo que parece. Asegurémonos de que tu cadena de suministro esté documentada y verificada antes del plazo.',
+    'contact.btn1':'Contáctanos ↗','contact.btn2':'Saber más',
+    'contact.meta':'Trieste, Italia · Roma, Italia · Tegucigalpa, Honduras',
+    'footer.tagline':'El valor de los datos, de vuelta a su origen',
+    'footer.legal':'© 2026 AgroDignity Initiative · Todos los derechos reservados'
+  },
+  fr: {
+    'nav.how':'Comment ça marche','nav.buyers':'Pour les acheteurs','nav.producers':'Pour les producteurs',
+    'nav.mission':'Mission','nav.team':'Équipe','nav.cta':'Démarrer',
+    'hero.eyebrow':'Conformité des données agricoles · Sud Global vers l\'Europe',
+    'hero.title':'Données agricoles<br><em>avec dignité.</em><strong>Vérifiées à l\'origine.</strong>',
+    'hero.body':'Nous connectons les petits producteurs et coopératives du Sud Global avec les importateurs européens — en fournissant des données agricoles vérifiées satisfaisant l\'EUDR, la CSRD et le LkSG. La seule plateforme conçue pour restituer la valeur des données aux producteurs qui les génèrent.',
+    'hero.btn1':'Être conforme ↗','hero.btn2':'Voir comment ça marche',
+    'hero.visual.tag':'Vérifié à l\'origine',
+    'hero.visual.quote':'« De la récolte au dossier de conformité — traçable, digne, à vous. »',
+    'ticker.rev':'Revenus aux producteurs · <span class="accent">Données avec Dignité</span>',
+    'numbers.title':'L\'ampleur<br>du <em>défi.</em>',
+    'numbers.sub':'500 millions de petits agriculteurs. Une réglementation. Une date limite. Une plateforme construite pour relier les deux mondes.',
+    'num.1':'Petits agriculteurs<br>dans le Sud Global','num.2':'Échéance EUDR<br>pour les grands opérateurs',
+    'num.3':'Réglementations couvertes :<br>EUDR · CSRD · LkSG','num.4':'Points de données vérifiés<br>par exploitation — CDAR',
+    'how.eyebrow':'Comment ça marche',
+    'how.title':'Trois étapes.<br><em>Un package de conformité.</em>',
+    'how.body':'De la capture GPS sur le terrain à un PDF prêt pour le DDS pour votre soumission européenne — entièrement automatisé, vérifié par satellite.',
+    'how.1.title':'Capture sur le terrain',
+    'how.1.body':'Les techniciens de terrain collectent 16 points de données CDAR par exploitation grâce à notre application mobile hors connexion. Polygone GPS, indicateurs de travail, consentement FDRL — en une seule visite.',
+    'how.2.title':'Vérification par satellite',
+    'how.2.body':'Notre pipeline croise chaque polygone d\'exploitation avec les données Hansen GFC de Global Forest Watch. Vérification de déforestation post-2020. RÉUSSI / EN RÉVISION / ÉCHOUÉ avec piste d\'audit SHA-256.',
+    'how.3.title':'Livraison du package',
+    'how.3.body':'Un PDF prêt pour le DDS avec les trois piliers ESG : Environnemental (EUDR), Social (LkSG/CSRD), Gouvernance (FDRL). Prêt à soumettre dans EU TRACES NT.',
+    'buyers.eyebrow':'Pour les importateurs européens',
+    'buyers.title':'Votre chaîne d\'approvisionnement.<br><em>Entièrement documentée.</em>',
+    'buyers.body':'L\'EUDR exige des données de géolocalisation et de déforestation vérifiées pour chaque exploitation de votre chaîne d\'approvisionnement. Nous livrons un dossier de conformité complet par exploitation — à 40% en dessous du prix de référence du marché d\'Amsterdam.',
+    'buyers.cta':'Demander une démo ↗',
+    'product.1.name':'Package de Conformité EUDR',
+    'product.1.desc':'Polygone GPS + vérification de déforestation + PDF prêt pour DDS. Tout ce que la réglementation exige, vérifié par satellite.',
+    'product.2.name':'Score ESG par Exploitation',
+    'product.2.desc':'Score ESG à trois piliers : Environnemental, Social, Gouvernance. Satisfait le reporting Scope 3 de la CSRD pour votre chaîne d\'approvisionnement.',
+    'product.3.name':'Pack de Données de Diligence Raisonnée',
+    'product.3.desc':'Indicateurs de travail, certification de travail des enfants, vérification des droits fonciers. Prêt pour les exigences d\'audit LkSG et CSDDD.',
+    'producers.quote':'« La dignité est la liberté d\'agir,<br>le droit d\'être <em>reconnu,</em><br>et l\'égalité partagée par tout être humain. »',
+    'producers.eyebrow':'Pour les producteurs',
+    'producers.title':'Vos données.<br><em>Votre valeur.</em>',
+    'producers.body':'AgroDignity est la seule plateforme qui reverse les revenus des données directement au producteur. 90% de ce que vos données génèrent sur les marchés européens vous revient — à vous qui les avez cultivées, soignées et rendues possibles.',
+    'producers.cta':'Nous contacter ↗',
+    'pp.1.title':'Une visite. Toutes les données capturées.',
+    'pp.1.body':'Un technicien de terrain se rend une fois sur place. Les 16 points de données sont collectés dans un formulaire hors ligne — sans paperasse, sans répétition, sans visites multiples perturbant votre travail.',
+    'pp.2.title':'Vous êtes propriétaire de vos données',
+    'pp.2.body':'Les producteurs conservent le contrôle total de leurs informations et peuvent retirer leur consentement à tout moment. La souveraineté des données est intégrée à la plateforme.',
+    'pp.3.title':'Les revenus des données reviennent au producteur',
+    'pp.3.body':'Une part de chaque transaction de données revient directement au producteur qui les a générées. Aucun intermédiaire n\'extrait de valeur à la source.',
+    'photobreak.quote':'« La valeur des données devrait circuler<br>dans le même sens que les marchandises —<br><em>vers là où tout a commencé.</em> »',
+    'mission.eyebrow':'Mission · Vision · Valeurs',
+    'mission.title':'Ce pour quoi nous nous battons.<br><em>Pourquoi ça compte.</em>',
+    'mission.label':'Mission',
+    'mission.text':'Nous créons des ponts de connaissance et de communication entre les acteurs du système alimentaire mondial — en générant les capacités pour que chaque acteur gère ses propres décisions et oriente son propre avenir grâce à l\'accès à l\'information et à la technologie.',
+    'vision.label':'Vision',
+    'vision.text':'Être les pionniers dans la conception de systèmes accessibles où les données des systèmes alimentaires génèrent de la valeur depuis leur origine — en restituant cette valeur aux personnes qui les ont créées.',
+    'values.title':'Cinq valeurs.<br><em>Un engagement.</em>',
+    'value.1.name':'Dignité','value.1.desc':'La capacité de chaque acteur du système alimentaire à gérer ses propres décisions — avec accès aux connaissances, à l\'information et à la technologie qui le permettent.',
+    'value.2.name':'Équité','value.2.desc':'Accès universel aux connaissances, à l\'information et à la technologie — quelle que soit la taille de l\'exploitation ou l\'emplacement du producteur dans le monde.',
+    'value.3.name':'Engagement','value.3.desc':'Construire des mécanismes redistributifs au sein de l\'économie des données des systèmes alimentaires — en veillant à ce que la valeur générée par les données revienne à son origine.',
+    'value.4.name':'Transparence','value.4.desc':'Chaque point de données, chaque transaction, chaque décision est traçable et vérifiable. Pas de boîtes noires. Ce que nous disons peut être audité.',
+    'value.5.name':'Confiance','value.5.desc':'Construite grâce à une communication claire et des preuves vérifiables — pas des promesses. Chaque résultat est communiqué ouvertement à tous les acteurs concernés.',
+    'team.eyebrow':'L\'équipe',
+    'team.title':'Construite par des personnes qui connaissent<br><em>le terrain et la réglementation.</em>',
+    'team.1.desc':'Droit alimentaire international · Politique agricole · FAO',
+    'team.2.desc':'Analyse de données · Infrastructure technologique · FAO Rome',
+    'team.3.desc':'Systèmes agroalimentaires · Marchés durables · Trieste, Italie',
+    'contact.eyebrow':'Démarrer',
+    'contact.title':'Prêt à être<br>conforme à l\'EUDR ?',
+    'contact.body':'Le 30 décembre 2026 est plus proche qu\'il n\'y paraît. Assurons-nous que votre chaîne d\'approvisionnement est documentée et vérifiée avant la date limite.',
+    'contact.btn1':'Nous contacter ↗','contact.btn2':'En savoir plus',
+    'contact.meta':'Trieste, Italie · Rome, Italie · Tegucigalpa, Honduras',
+    'footer.tagline':'La valeur des données, retournée à son origine',
+    'footer.legal':'© 2026 AgroDignity Initiative · Tous droits réservés'
+  }
+};
+
+function applyLang(lang) {
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (t[el.dataset.i18n] !== undefined) el.textContent = t[el.dataset.i18n];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    if (t[el.dataset.i18nHtml] !== undefined) el.innerHTML = t[el.dataset.i18nHtml];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang;
+  localStorage.setItem('adg-lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+const stored = localStorage.getItem('adg-lang');
+const browser = (navigator.language || '').slice(0, 2);
+const init = stored || (['es','fr'].includes(browser) ? browser : 'en');
+if (init !== 'en') applyLang(init);
 </script>
 </body>
 </html>
