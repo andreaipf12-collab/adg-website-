@@ -728,6 +728,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <button class="lang-btn active" data-lang="en">EN</button>
     <button class="lang-btn" data-lang="es">ES</button>
     <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="it">IT</button>
   </div>
 </nav>
 
@@ -1367,9 +1368,80 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
 
+translations.it = {
+    'nav.how':'Come funziona','nav.buyers':'Per gli acquirenti','nav.producers':'Per i produttori',
+    'nav.mission':'Missione','nav.team':'Team','nav.cta':'Inizia ora',
+    'hero.eyebrow':'Conformità dei dati agricoli · Sud Globale verso l\'Europa',
+    'hero.title':'Dati agricoli<br><em>con dignità.</em><strong>Verificati all\'origine.</strong>',
+    'hero.body':'Colleghiamo piccoli produttori e cooperative del Sud Globale con gli importatori europei — fornendo dati agricoli verificati che soddisfano EUDR, CSRD e LkSG. L\'unica piattaforma progettata per restituire il valore dei dati ai produttori che li generano.',
+    'hero.btn1':'Diventa conforme ↗','hero.btn2':'Scopri come funziona',
+    'hero.visual.tag':'Verificato all\'origine',
+    'hero.visual.quote':'«Dal raccolto al pacchetto di conformità — tracciabile, dignitoso, tuo.»',
+    'ticker.rev':'Entrate ai produttori · <span class="accent">Dati con Dignità</span>',
+    'numbers.title':'La portata<br>della <em>sfida.</em>',
+    'numbers.sub':'500 milioni di piccoli agricoltori. Un regolamento. Una scadenza. Una piattaforma costruita per collegare entrambi i mondi.',
+    'num.1':'Piccoli agricoltori<br>nel Sud Globale','num.2':'Scadenza EUDR<br>per i grandi operatori',
+    'num.3':'Normative coperte:<br>EUDR · CSRD · LkSG','num.4':'Punti dati verificati<br>per azienda — CDAR',
+    'how.eyebrow':'Come funziona',
+    'how.title':'Tre passi.<br><em>Un pacchetto di conformità.</em>',
+    'how.body':'Dalla raccolta GPS sul campo a un PDF pronto per il DDS per la tua presentazione europea — completamente automatizzato, verificato via satellite.',
+    'how.1.title':'Raccolta sul campo',
+    'how.1.body':'I tecnici di campo raccolgono 16 punti dati CDAR per azienda tramite la nostra app mobile offline. Poligono GPS, indicatori di lavoro, consenso FDRL — tutto in una sola visita.',
+    'how.2.title':'Verifica via satellite',
+    'how.2.body':'Il nostro sistema incrocia ogni poligono aziendale con i dati Hansen GFC di Global Forest Watch. Controllo della deforestazione post-2020. SUPERATO / IN REVISIONE / RESPINTO con traccia di audit SHA-256.',
+    'how.3.title':'Consegna del pacchetto',
+    'how.3.body':'Un PDF pronto per il DDS con i tre pilastri ESG: Ambientale (EUDR), Sociale (LkSG/CSRD), Governance (FDRL). Pronto per la presentazione in EU TRACES NT.',
+    'buyers.eyebrow':'Per gli importatori europei',
+    'buyers.title':'La tua catena di approvvigionamento.<br><em>Completamente documentata.</em>',
+    'buyers.body':'L\'EUDR richiede dati di geolocalizzazione e deforestazione verificati per ogni azienda nella tua catena di approvvigionamento. Forniamo un pacchetto di conformità completo per azienda — al 40% al di sotto del prezzo di riferimento del mercato di Amsterdam.',
+    'buyers.cta':'Richiedi una demo ↗',
+    'product.1.name':'Pacchetto di Conformità EUDR',
+    'product.1.desc':'Poligono GPS + verifica della deforestazione + PDF pronto per DDS. Tutto ciò che il regolamento richiede, verificato via satellite.',
+    'product.2.name':'Punteggio ESG per Azienda',
+    'product.2.desc':'Punteggio ESG a tre pilastri: Ambientale, Sociale, Governance. Soddisfa il reporting Scope 3 della CSRD per la tua catena di approvvigionamento.',
+    'product.3.name':'Pacchetto Dati di Due Diligence',
+    'product.3.desc':'Indicatori di lavoro, certificazione sul lavoro minorile, verifica del diritto fondiario. Pronto per i requisiti di audit LkSG e CSDDD.',
+    'producers.quote':'«La dignità è la libertà di agire,<br>il diritto di essere <em>riconosciuti,</em><br>e l\'uguaglianza condivisa da ogni essere umano.»',
+    'producers.eyebrow':'Per i produttori',
+    'producers.title':'I tuoi dati.<br><em>Il tuo valore.</em>',
+    'producers.body':'AgroDignity è l\'unica piattaforma che indirizza i proventi dei dati direttamente al produttore. Il 90% di ciò che i tuoi dati generano nei mercati europei torna a te — la persona che li ha coltivati, curati e resi possibili.',
+    'producers.cta':'Contattaci ↗',
+    'pp.1.title':'Una visita. Tutti i dati raccolti.',
+    'pp.1.body':'Un tecnico di campo visita una volta. Tutti i 16 punti dati vengono raccolti in un unico modulo offline — nessuna burocrazia, nessuna ripetizione, nessuna visita multipla che disturba il tuo lavoro.',
+    'pp.2.title':'Sei proprietario dei tuoi dati',
+    'pp.2.body':'I produttori mantengono il pieno controllo delle proprie informazioni e possono revocare il consenso in qualsiasi momento. La sovranità dei dati è integrata nella piattaforma.',
+    'pp.3.title':'I proventi dei dati tornano al produttore',
+    'pp.3.body':'Una quota di ogni transazione di dati va direttamente al produttore che li ha generati. Nessun intermediario estrae valore dalla fonte.',
+    'photobreak.quote':'«Il valore dei dati dovrebbe fluire<br>nella stessa direzione dei beni —<br><em>verso dove tutto è iniziato.</em>»',
+    'mission.eyebrow':'Missione · Visione · Valori',
+    'mission.title':'Ciò per cui lottiamo.<br><em>Perché è importante.</em>',
+    'mission.label':'Missione',
+    'mission.text':'Costruiamo ponti di conoscenza e comunicazione tra gli attori del sistema alimentare globale — generando le capacità affinché ogni attore gestisca le proprie decisioni e diriga il proprio futuro attraverso l\'accesso all\'informazione e alla tecnologia.',
+    'vision.label':'Visione',
+    'vision.text':'Essere i pionieri nella progettazione di sistemi accessibili in cui i dati dei sistemi alimentari generino valore dalla loro origine — restituendo quel valore alle persone che li hanno creati.',
+    'values.title':'Cinque valori.<br><em>Un impegno.</em>',
+    'value.1.name':'Dignità','value.1.desc':'La capacità di ogni attore del sistema alimentare di gestire le proprie decisioni — con accesso alle conoscenze, alle informazioni e alla tecnologia che lo rendono possibile.',
+    'value.2.name':'Equità','value.2.desc':'Accesso universale alle conoscenze, alle informazioni e alla tecnologia — indipendentemente dalle dimensioni dell\'azienda o dalla posizione del produttore nel mondo.',
+    'value.3.name':'Impegno','value.3.desc':'Costruire meccanismi redistributivi all\'interno dell\'economia dei dati dei sistemi alimentari — garantendo che il valore generato dai dati torni alla sua origine.',
+    'value.4.name':'Trasparenza','value.4.desc':'Ogni punto dati, ogni transazione, ogni decisione è tracciabile e verificabile. Nessuna scatola nera. Ciò che diciamo può essere verificato.',
+    'value.5.name':'Fiducia','value.5.desc':'Costruita attraverso una comunicazione chiara e prove verificabili — non promesse. Ogni risultato viene comunicato apertamente a tutti gli attori coinvolti.',
+    'team.eyebrow':'Il team',
+    'team.title':'Costruito da persone che conoscono<br><em>il campo e la normativa.</em>',
+    'team.1.desc':'Diritto alimentare internazionale · Politica agricola · FAO',
+    'team.2.desc':'Analisi dei dati · Infrastruttura tecnologica · FAO Roma',
+    'team.3.desc':'Sistemi agroalimentari · Mercati sostenibili · Trieste, Italia',
+    'contact.eyebrow':'Inizia ora',
+    'contact.title':'Pronto a essere<br>conforme all\'EUDR?',
+    'contact.body':'Il 30 dicembre 2026 è più vicino di quanto sembri. Assicuriamoci che la tua catena di approvvigionamento sia documentata e verificata prima della scadenza.',
+    'contact.btn1':'Contattaci ↗','contact.btn2':'Scopri di più',
+    'contact.meta':'Trieste, Italia · Roma, Italia · Tegucigalpa, Honduras',
+    'footer.tagline':'Il valore dei dati, restituito alla sua origine',
+    'footer.legal':'© 2026 AgroDignity Initiative · Tutti i diritti riservati'
+};
+
 const stored = localStorage.getItem('adg-lang');
 const browser = (navigator.language || '').slice(0, 2);
-const init = stored || (['es','fr'].includes(browser) ? browser : 'en');
+const init = stored || (['es','fr','it'].includes(browser) ? browser : 'en');
 if (init !== 'en') applyLang(init);
 </script>
 </body>
