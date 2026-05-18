@@ -792,20 +792,20 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
   </div>
   <div class="num-grid">
     <div class="num-item reveal">
-      <div class="num-val">500<span class="green">M+</span></div>
-      <div class="num-label" data-i18n-html="num.1">Smallholder farmers<br>in the Global South</div>
+      <div class="num-val"><span class="green">70</span>%</div>
+      <div class="num-label" data-i18n-html="num.1">of global coffee and cacao<br>grown by smallholder farmers</div>
     </div>
     <div class="num-item reveal d1">
-      <div class="num-val">Dec<br><span class="green">2026</span></div>
-      <div class="num-label" data-i18n-html="num.2">EUDR deadline<br>for large operators</div>
+      <div class="num-val"><span class="green">0</span></div>
+      <div class="num-label" data-i18n-html="num.2">jurisdictions where farmers<br>legally own their agricultural data</div>
     </div>
     <div class="num-item reveal d2">
-      <div class="num-val"><span class="green">3</span></div>
-      <div class="num-label" data-i18n-html="num.3">Regulations covered:<br>EUDR · CSRD · LkSG</div>
+      <div class="num-val"><span class="green">1</span></div>
+      <div class="num-label" data-i18n-html="num.3">registration covers EUDR,<br>CSRD and LkSG simultaneously</div>
     </div>
     <div class="num-item reveal d3">
-      <div class="num-val"><span class="green">16</span></div>
-      <div class="num-label" data-i18n-html="num.4">Verified data points<br>per farm — CDAR</div>
+      <div class="num-val" data-i18n="num.4.val">First</div>
+      <div class="num-label" data-i18n-html="num.4">platform in Latin America<br>that pays producers for their data</div>
     </div>
   </div>
 </section>
@@ -877,7 +877,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div>
       <div class="section-eyebrow sky reveal" data-i18n="buyers.eyebrow">For European importers</div>
       <h2 class="section-title on-dark reveal" data-i18n-html="buyers.title">Your supply chain.<br><em>Fully documented.</em></h2>
-      <p class="section-body on-dark reveal" data-i18n="buyers.body">EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm — at 40% below the Amsterdam market benchmark.</p>
+      <p class="section-body on-dark reveal" data-i18n="buyers.body">EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm.</p>
       <a href="#contact" class="btn btn-cream reveal" style="margin-top:8px" data-i18n="buyers.cta">Request a demo ↗</a>
     </div>
     <div class="product-cards">
@@ -939,7 +939,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div>
       <div class="section-eyebrow reveal" data-i18n="producers.eyebrow">For producers</div>
       <h2 class="section-title reveal" data-i18n-html="producers.title">Your data.<br><em>Your value.</em></h2>
-      <p class="producers-text reveal" data-i18n="producers.body">AgroDignity is the only platform that routes data revenue directly back to the producer. 90% of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.</p>
+      <p class="producers-text reveal" data-i18n="producers.body">AgroDignity is the only platform that routes data revenue directly back to the producer. A meaningful share of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.</p>
       <a href="#contact" class="btn btn-outline-navy reveal" style="margin-top:8px" data-i18n="producers.cta">Talk to us ↗</a>
     </div>
     <div class="producers-points">
@@ -1149,8 +1149,8 @@ const translations = {
     'ticker.rev':'Revenue to producers · <span class="accent">Data with Dignity</span>',
     'numbers.title':'The scale<br>of <em>the challenge.</em>',
     'numbers.sub':'500 million smallholder farmers. One regulation. One deadline. One platform built to bridge both worlds.',
-    'num.1':'Smallholder farmers<br>in the Global South','num.2':'EUDR deadline<br>for large operators',
-    'num.3':'Regulations covered:<br>EUDR · CSRD · LkSG','num.4':'Verified data points<br>per farm — CDAR',
+    'num.1':'of global coffee and cacao<br>grown by smallholder farmers','num.2':'jurisdictions where farmers<br>legally own their agricultural data',
+    'num.3':'registration covers EUDR,<br>CSRD and LkSG simultaneously','num.4':'platform in Latin America<br>that pays producers for their data','num.4.val':'First',
     'how.eyebrow':'How it works',
     'how.title':'Three steps.<br><em>One compliance package.</em>',
     'how.body':'From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.',
@@ -1162,7 +1162,7 @@ const translations = {
     'how.3.body':'A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance (FDRL). Ready to submit in EU TRACES NT.',
     'buyers.eyebrow':'For European importers',
     'buyers.title':'Your supply chain.<br><em>Fully documented.</em>',
-    'buyers.body':'EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm — at 40% below the Amsterdam market benchmark.',
+    'buyers.body':'EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete compliance package per farm.',
     'buyers.cta':'Request a demo ↗',
     'product.1.name':'EUDR Compliance Package',
     'product.1.desc':'GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.',
@@ -1173,7 +1173,7 @@ const translations = {
     'producers.quote':'"Dignity is the freedom to act,<br>the right to be <em>recognized,</em><br>and the equality shared by every human being."',
     'producers.eyebrow':'For producers',
     'producers.title':'Your data.<br><em>Your value.</em>',
-    'producers.body':'AgroDignity is the only platform that routes data revenue directly back to the producer. 90% of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.',
+    'producers.body':'AgroDignity is the only platform that routes data revenue directly back to the producer. A meaningful share of what your data earns in European markets returns to you — the person who grew it, tended it, and made it all possible.',
     'producers.cta':'Talk to us ↗',
     'pp.1.title':'One visit. All data captured.',
     'pp.1.body':'A field technician visits once. All 16 data points are collected in a single offline form — no paperwork, no repetition, no multiple visits disrupting your work.',
@@ -1219,8 +1219,8 @@ const translations = {
     'ticker.rev':'Ingresos para productores · <span class="accent">Datos con Dignidad</span>',
     'numbers.title':'La escala<br>del <em>desafío.</em>',
     'numbers.sub':'500 millones de pequeños agricultores. Una regulación. Un plazo. Una plataforma construida para conectar ambos mundos.',
-    'num.1':'Pequeños agricultores<br>en el Sur Global','num.2':'Plazo EUDR<br>para grandes operadores',
-    'num.3':'Regulaciones cubiertas:<br>EUDR · CSRD · LkSG','num.4':'Puntos de datos verificados<br>por finca — CDAR',
+    'num.1':'del café y cacao mundial<br>cultivado por pequeños productores','num.2':'jurisdicciones donde los agricultores<br>son dueños legales de sus datos agrícolas',
+    'num.3':'registro cubre simultáneamente<br>EUDR, CSRD y LkSG','num.4':'plataforma en América Latina<br>que paga a los productores por sus datos','num.4.val':'Primera',
     'how.eyebrow':'Cómo funciona',
     'how.title':'Tres pasos.<br><em>Un paquete de cumplimiento.</em>',
     'how.body':'Desde la captura GPS en el campo hasta un PDF listo para DDS en tu solicitud europea — totalmente automatizado, verificado por satélite.',
@@ -1232,7 +1232,7 @@ const translations = {
     'how.3.body':'Un PDF listo para DDS con los tres pilares ESG: Ambiental (EUDR), Social (LkSG/CSRD), Gobernanza (FDRL). Listo para enviar en EU TRACES NT.',
     'buyers.eyebrow':'Para importadores europeos',
     'buyers.title':'Tu cadena de suministro.<br><em>Completamente documentada.</em>',
-    'buyers.body':'La EUDR exige datos de geolocalización y deforestación verificados para cada finca en tu cadena de suministro. Entregamos un paquete de cumplimiento completo por finca — un 40% por debajo del precio del mercado de Ámsterdam.',
+    'buyers.body':'La EUDR exige datos de geolocalización y deforestación verificados para cada finca en tu cadena de suministro. Entregamos un paquete de cumplimiento completo por finca.',
     'buyers.cta':'Solicitar una demo ↗',
     'product.1.name':'Paquete de Cumplimiento EUDR',
     'product.1.desc':'Polígono GPS + verificación de deforestación + PDF listo para DDS. Todo lo que la regulación exige, verificado por satélite.',
@@ -1243,7 +1243,7 @@ const translations = {
     'producers.quote':'"La dignidad es la libertad de actuar,<br>el derecho a ser <em>reconocido,</em><br>y la igualdad que pertenece a todo ser humano."',
     'producers.eyebrow':'Para productores',
     'producers.title':'Tus datos.<br><em>Tu valor.</em>',
-    'producers.body':'AgroDignity es la única plataforma que canaliza los ingresos de datos directamente al productor. El 90% de lo que tus datos generan en los mercados europeos regresa a ti — la persona que los cultivó, los cuidó y lo hizo posible.',
+    'producers.body':'AgroDignity es la única plataforma que canaliza los ingresos de datos directamente al productor. Una parte significativa de lo que tus datos generan en los mercados europeos regresa a ti — la persona que los cultivó, los cuidó y lo hizo posible.',
     'producers.cta':'Habla con nosotros ↗',
     'pp.1.title':'Una visita. Todos los datos capturados.',
     'pp.1.body':'Un técnico de campo visita una vez. Los 16 puntos de datos se recopilan en un formulario offline — sin papeleo, sin repetición, sin múltiples visitas que interrumpan tu trabajo.',
@@ -1289,8 +1289,8 @@ const translations = {
     'ticker.rev':'Revenus aux producteurs · <span class="accent">Données avec Dignité</span>',
     'numbers.title':'L\'ampleur<br>du <em>défi.</em>',
     'numbers.sub':'500 millions de petits agriculteurs. Une réglementation. Une date limite. Une plateforme construite pour relier les deux mondes.',
-    'num.1':'Petits agriculteurs<br>dans le Sud Global','num.2':'Échéance EUDR<br>pour les grands opérateurs',
-    'num.3':'Réglementations couvertes :<br>EUDR · CSRD · LkSG','num.4':'Points de données vérifiés<br>par exploitation — CDAR',
+    'num.1':'du café et du cacao mondial<br>cultivé par les petits producteurs','num.2':'juridictions où les agriculteurs<br>possèdent légalement leurs données agricoles',
+    'num.3':'inscription couvre simultanément<br>l\'EUDR, la CSRD et le LkSG','num.4':'plateforme en Amérique latine<br>qui rémunère les producteurs pour leurs données','num.4.val':'Première',
     'how.eyebrow':'Comment ça marche',
     'how.title':'Trois étapes.<br><em>Un package de conformité.</em>',
     'how.body':'De la capture GPS sur le terrain à un PDF prêt pour le DDS pour votre soumission européenne — entièrement automatisé, vérifié par satellite.',
@@ -1302,7 +1302,7 @@ const translations = {
     'how.3.body':'Un PDF prêt pour le DDS avec les trois piliers ESG : Environnemental (EUDR), Social (LkSG/CSRD), Gouvernance (FDRL). Prêt à soumettre dans EU TRACES NT.',
     'buyers.eyebrow':'Pour les importateurs européens',
     'buyers.title':'Votre chaîne d\'approvisionnement.<br><em>Entièrement documentée.</em>',
-    'buyers.body':'L\'EUDR exige des données de géolocalisation et de déforestation vérifiées pour chaque exploitation de votre chaîne d\'approvisionnement. Nous livrons un dossier de conformité complet par exploitation — à 40% en dessous du prix de référence du marché d\'Amsterdam.',
+    'buyers.body':'L\'EUDR exige des données de géolocalisation et de déforestation vérifiées pour chaque exploitation de votre chaîne d\'approvisionnement. Nous livrons un dossier de conformité complet par exploitation.',
     'buyers.cta':'Demander une démo ↗',
     'product.1.name':'Package de Conformité EUDR',
     'product.1.desc':'Polygone GPS + vérification de déforestation + PDF prêt pour DDS. Tout ce que la réglementation exige, vérifié par satellite.',
@@ -1313,7 +1313,7 @@ const translations = {
     'producers.quote':'« La dignité est la liberté d\'agir,<br>le droit d\'être <em>reconnu,</em><br>et l\'égalité partagée par tout être humain. »',
     'producers.eyebrow':'Pour les producteurs',
     'producers.title':'Vos données.<br><em>Votre valeur.</em>',
-    'producers.body':'AgroDignity est la seule plateforme qui reverse les revenus des données directement au producteur. 90% de ce que vos données génèrent sur les marchés européens vous revient — à vous qui les avez cultivées, soignées et rendues possibles.',
+    'producers.body':'AgroDignity est la seule plateforme qui reverse les revenus des données directement au producteur. Une part significative de ce que vos données génèrent sur les marchés européens vous revient — à vous qui les avez cultivées, soignées et rendues possibles.',
     'producers.cta':'Nous contacter ↗',
     'pp.1.title':'Une visite. Toutes les données capturées.',
     'pp.1.body':'Un technicien de terrain se rend une fois sur place. Les 16 points de données sont collectés dans un formulaire hors ligne — sans paperasse, sans répétition, sans visites multiples perturbant votre travail.',
@@ -1380,8 +1380,8 @@ translations.it = {
     'ticker.rev':'Entrate ai produttori · <span class="accent">Dati con Dignità</span>',
     'numbers.title':'La portata<br>della <em>sfida.</em>',
     'numbers.sub':'500 milioni di piccoli agricoltori. Un regolamento. Una scadenza. Una piattaforma costruita per collegare entrambi i mondi.',
-    'num.1':'Piccoli agricoltori<br>nel Sud Globale','num.2':'Scadenza EUDR<br>per i grandi operatori',
-    'num.3':'Normative coperte:<br>EUDR · CSRD · LkSG','num.4':'Punti dati verificati<br>per azienda — CDAR',
+    'num.1':'del caffè e cacao mondiale<br>coltivato da piccoli produttori','num.2':'giurisdizioni in cui gli agricoltori<br>possiedono legalmente i propri dati agricoli',
+    'num.3':'registrazione copre simultaneamente<br>EUDR, CSRD e LkSG','num.4':'piattaforma in America Latina<br>che paga i produttori per i loro dati','num.4.val':'Prima',
     'how.eyebrow':'Come funziona',
     'how.title':'Tre passi.<br><em>Un pacchetto di conformità.</em>',
     'how.body':'Dalla raccolta GPS sul campo a un PDF pronto per il DDS per la tua presentazione europea — completamente automatizzato, verificato via satellite.',
@@ -1393,7 +1393,7 @@ translations.it = {
     'how.3.body':'Un PDF pronto per il DDS con i tre pilastri ESG: Ambientale (EUDR), Sociale (LkSG/CSRD), Governance (FDRL). Pronto per la presentazione in EU TRACES NT.',
     'buyers.eyebrow':'Per gli importatori europei',
     'buyers.title':'La tua catena di approvvigionamento.<br><em>Completamente documentata.</em>',
-    'buyers.body':'L\'EUDR richiede dati di geolocalizzazione e deforestazione verificati per ogni azienda nella tua catena di approvvigionamento. Forniamo un pacchetto di conformità completo per azienda — al 40% al di sotto del prezzo di riferimento del mercato di Amsterdam.',
+    'buyers.body':'L\'EUDR richiede dati di geolocalizzazione e deforestazione verificati per ogni azienda nella tua catena di approvvigionamento. Forniamo un pacchetto di conformità completo per azienda.',
     'buyers.cta':'Richiedi una demo ↗',
     'product.1.name':'Pacchetto di Conformità EUDR',
     'product.1.desc':'Poligono GPS + verifica della deforestazione + PDF pronto per DDS. Tutto ciò che il regolamento richiede, verificato via satellite.',
@@ -1404,7 +1404,7 @@ translations.it = {
     'producers.quote':'«La dignità è la libertà di agire,<br>il diritto di essere <em>riconosciuti,</em><br>e l\'uguaglianza condivisa da ogni essere umano.»',
     'producers.eyebrow':'Per i produttori',
     'producers.title':'I tuoi dati.<br><em>Il tuo valore.</em>',
-    'producers.body':'AgroDignity è l\'unica piattaforma che indirizza i proventi dei dati direttamente al produttore. Il 90% di ciò che i tuoi dati generano nei mercati europei torna a te — la persona che li ha coltivati, curati e resi possibili.',
+    'producers.body':'AgroDignity è l\'unica piattaforma che indirizza i proventi dei dati direttamente al produttore. Una quota significativa di ciò che i tuoi dati generano nei mercati europei torna a te — la persona che li ha coltivati, curati e resi possibili.',
     'producers.cta':'Contattaci ↗',
     'pp.1.title':'Una visita. Tutti i dati raccolti.',
     'pp.1.body':'Un tecnico di campo visita una volta. Tutti i 16 punti dati vengono raccolti in un unico modulo offline — nessuna burocrazia, nessuna ripetizione, nessuna visita multipla che disturba il tuo lavoro.',
