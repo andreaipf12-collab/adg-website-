@@ -748,8 +748,17 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .lang-switcher { display: none; }
+  nav > .lang-switcher { display: none; }
   .menu-toggle { display: flex; }
+  .mobile-menu .lang-switcher { display: flex; margin-top: 24px; gap: 6px; }
+  .mobile-menu .lang-btn {
+    font-size: 13px; padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+  }
+  .mobile-menu .lang-btn.active {
+    border-color: var(--green); color: var(--white); background: rgba(59,181,67,0.15);
+  }
 }
 @media (max-width: 600px) {
   .num-grid { grid-template-columns: 1fr; }
