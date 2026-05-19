@@ -659,6 +659,52 @@ footer {
 .footer-brand strong { font-style: normal; color: rgba(255,255,255,0.6); font-weight: 400; }
 .footer-legal { font-size: 12px; color: rgba(255,255,255,0.2); }
 
+/* ─── HAMBURGER MENU ─── */
+.menu-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  cursor: pointer; background: none; border: none;
+  padding: 6px; z-index: 200; margin-left: 8px;
+}
+.menu-toggle span {
+  display: block; width: 24px; height: 2px;
+  background: var(--white); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+nav.scrolled .menu-toggle span { background: var(--navy); }
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed; top: 72px; left: 0; right: 0;
+  background: var(--navy-deep); z-index: 98;
+  padding: 16px var(--gut) 32px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu ul { list-style: none; display: flex; flex-direction: column; }
+.mobile-menu ul a {
+  display: block; font-size: 16px; font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s;
+}
+.mobile-menu ul a:hover { color: var(--white); }
+.mobile-menu .mobile-cta {
+  display: inline-flex; margin-top: 20px;
+  background: var(--green); color: var(--white);
+  font-family: var(--font-sans); font-size: 14px; font-weight: 700;
+  padding: 13px 28px; border-radius: 99px;
+  transition: background 0.2s;
+}
+.mobile-menu .mobile-cta:hover { background: var(--green-dk); }
+.mobile-menu .lang-switcher { margin: 20px 0 0; }
+.mobile-menu .lang-btn { color: rgba(255,255,255,0.45); }
+.mobile-menu .lang-btn.active { color: var(--white); background: rgba(255,255,255,0.12); }
+
 /* ─── LANG SWITCHER ─── */
 .lang-switcher {
   display: flex; align-items: center; gap: 2px; margin-left: 12px;
@@ -698,6 +744,8 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
   .values-grid { grid-template-columns: repeat(2,1fr); }
   .team-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
+  .lang-switcher { display: none; }
+  .menu-toggle { display: flex; }
   .numbers-header { flex-direction: column; align-items: flex-start; }
   .photo-break-bg { background-attachment: scroll; }
 }
@@ -730,7 +778,27 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <button class="lang-btn" data-lang="fr">FR</button>
     <button class="lang-btn" data-lang="it">IT</button>
   </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#how" data-i18n="nav.how">How it works</a></li>
+    <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
+    <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
+    <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+    <li><a href="#team" data-i18n="nav.team">Team</a></li>
+  </ul>
+  <a href="#contact" class="mobile-cta" data-i18n="nav.cta">Get started</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="it">IT</button>
+  </div>
+</div>
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="hero">
@@ -783,32 +851,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
   </div>
 </div>
-
-<!-- ══ NUMBERS ══ -->
-<section class="numbers-section">
-  <div class="numbers-header reveal">
-    <h2 class="numbers-title" data-i18n-html="numbers.title">The scale<br>of <em>the challenge.</em></h2>
-    <p class="numbers-sub" data-i18n="numbers.sub">500 million smallholder farmers. One regulation. One deadline. One platform built to bridge both worlds.</p>
-  </div>
-  <div class="num-grid">
-    <div class="num-item reveal">
-      <div class="num-val"><span class="green">70</span>%</div>
-      <div class="num-label" data-i18n-html="num.1">of global coffee and cacao<br>grown by smallholder farmers</div>
-    </div>
-    <div class="num-item reveal d1">
-      <div class="num-val"><span class="green">0</span></div>
-      <div class="num-label" data-i18n-html="num.2">jurisdictions where farmers<br>legally own their agricultural data</div>
-    </div>
-    <div class="num-item reveal d2">
-      <div class="num-val"><span class="green">1</span></div>
-      <div class="num-label" data-i18n-html="num.3">registration covers EUDR,<br>CSRD and LkSG simultaneously</div>
-    </div>
-    <div class="num-item reveal d3">
-      <div class="num-val"><span class="green">100</span>%</div>
-      <div class="num-label" data-i18n-html="num.4">producer data sovereignty —<br>built into every contract</div>
-    </div>
-  </div>
-</section>
 
 <!-- ══ HOW IT WORKS ══ -->
 <section class="how-section" id="how">
@@ -1073,7 +1115,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <div class="team-role">CEO · Chief Executive Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc" data-i18n="team.1.desc">International food law · Agricultural policy · FAO</p>
+        <p class="team-desc" data-i18n="team.1.desc">International food law · Agricultural policy</p>
       </div>
     </div>
     <div class="team-card reveal d1">
@@ -1083,7 +1125,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <div class="team-role">CTO · Chief Technology Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc" data-i18n="team.2.desc">Data Analysis · Technological Setup · FAO Rome</p>
+        <p class="team-desc" data-i18n="team.2.desc">Data Analysis · Technological Setup</p>
       </div>
     </div>
     <div class="team-card reveal d2">
@@ -1134,6 +1176,20 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ── MOBILE MENU ── */
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
 
 /* ── TRANSLATIONS ── */
 const translations = {
@@ -1196,8 +1252,8 @@ const translations = {
     'value.5.name':'Trust','value.5.desc':'Built through clear communication and verifiable evidence — not promises. Every result is communicated openly to all actors involved.',
     'team.eyebrow':'The team',
     'team.title':'Built by people who know<br><em>the field and the regulation.</em>',
-    'team.1.desc':'International food law · Agricultural policy · FAO',
-    'team.2.desc':'Data Analysis · Technological Setup · FAO Rome',
+    'team.1.desc':'International food law · Agricultural policy',
+    'team.2.desc':'Data Analysis · Technological Setup',
     'team.3.desc':'Agri-food systems · Sustainable markets · Trieste, Italy',
     'contact.eyebrow':'Get started',
     'contact.title':'Ready to be<br>EUDR compliant?',
@@ -1266,8 +1322,8 @@ const translations = {
     'value.5.name':'Confianza','value.5.desc':'Construida a través de comunicación clara y evidencia verificable — no promesas. Cada resultado se comunica abiertamente a todos los actores involucrados.',
     'team.eyebrow':'El equipo',
     'team.title':'Construido por personas que conocen<br><em>el campo y la regulación.</em>',
-    'team.1.desc':'Derecho alimentario internacional · Política agrícola · FAO',
-    'team.2.desc':'Análisis de datos · Configuración tecnológica · FAO Roma',
+    'team.1.desc':'Derecho alimentario internacional · Política agrícola',
+    'team.2.desc':'Análisis de datos · Configuración tecnológica',
     'team.3.desc':'Sistemas agroalimentarios · Mercados sostenibles · Trieste, Italia',
     'contact.eyebrow':'Comenzar',
     'contact.title':'¿Listo para cumplir<br>con la EUDR?',
@@ -1336,8 +1392,8 @@ const translations = {
     'value.5.name':'Confiance','value.5.desc':'Construite grâce à une communication claire et des preuves vérifiables — pas des promesses. Chaque résultat est communiqué ouvertement à tous les acteurs concernés.',
     'team.eyebrow':'L\'équipe',
     'team.title':'Construite par des personnes qui connaissent<br><em>le terrain et la réglementation.</em>',
-    'team.1.desc':'Droit alimentaire international · Politique agricole · FAO',
-    'team.2.desc':'Analyse de données · Infrastructure technologique · FAO Rome',
+    'team.1.desc':'Droit alimentaire international · Politique agricole',
+    'team.2.desc':'Analyse de données · Infrastructure technologique',
     'team.3.desc':'Systèmes agroalimentaires · Marchés durables · Trieste, Italie',
     'contact.eyebrow':'Démarrer',
     'contact.title':'Prêt à être<br>conforme à l\'EUDR ?',
@@ -1427,8 +1483,8 @@ translations.it = {
     'value.5.name':'Fiducia','value.5.desc':'Costruita attraverso una comunicazione chiara e prove verificabili — non promesse. Ogni risultato viene comunicato apertamente a tutti gli attori coinvolti.',
     'team.eyebrow':'Il team',
     'team.title':'Costruito da persone che conoscono<br><em>il campo e la normativa.</em>',
-    'team.1.desc':'Diritto alimentare internazionale · Politica agricola · FAO',
-    'team.2.desc':'Analisi dei dati · Infrastruttura tecnologica · FAO Roma',
+    'team.1.desc':'Diritto alimentare internazionale · Politica agricola',
+    'team.2.desc':'Analisi dei dati · Infrastruttura tecnologica',
     'team.3.desc':'Sistemi agroalimentari · Mercati sostenibili · Trieste, Italia',
     'contact.eyebrow':'Inizia ora',
     'contact.title':'Pronto a essere<br>conforme all\'EUDR?',
