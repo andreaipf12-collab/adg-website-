@@ -851,14 +851,14 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <span class="ticker-item">CSRD · <span class="accent">Scope 3 supply chain</span></span>
     <span class="ticker-item">LkSG · <span class="accent">DACH importers</span></span>
     <span class="ticker-item" data-i18n-html="ticker.rev"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
-    <span class="ticker-item">GPS polygon · Satellite verified · <span class="accent">SHA-256 audit trail</span></span>
+    <span class="ticker-item">Satellite verified · Tamper-proof audit · <span class="accent">Fully traceable</span></span>
     <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
     <!-- repeat for seamless loop -->
     <span class="ticker-item">EUDR · <span class="accent">Dec 30, 2026</span></span>
     <span class="ticker-item">CSRD · <span class="accent">Scope 3 supply chain</span></span>
     <span class="ticker-item">LkSG · <span class="accent">DACH importers</span></span>
     <span class="ticker-item" data-i18n-html="ticker.rev"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
-    <span class="ticker-item">GPS polygon · Satellite verified · <span class="accent">SHA-256 audit trail</span></span>
+    <span class="ticker-item">Satellite verified · Tamper-proof audit · <span class="accent">Fully traceable</span></span>
     <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
   </div>
 </div>
@@ -881,11 +881,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
       </div>
       <h3 class="how-title" data-i18n="how.1.title">Capture in the field</h3>
       <p class="how-body" data-i18n="how.1.body">Field technicians collect 16 CDAR data points per farm using our offline-capable mobile app. GPS polygon, labor indicators, FDRL consent — all in one visit.</p>
-      <div class="how-tags">
-        <span class="tag">GPS 6 decimals</span>
-        <span class="tag">FDRL consent</span>
-        <span class="tag">16 CDAR fields</span>
-      </div>
     </div>
     <div class="how-card reveal d1">
       <div class="how-num">2</div>
@@ -898,11 +893,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
       </div>
       <h3 class="how-title" data-i18n="how.2.title">Verify by satellite</h3>
       <p class="how-body" data-i18n="how.2.body">Our pipeline cross-checks every farm polygon against Global Forest Watch Hansen GFC data. Post-2020 deforestation check. PASS / REVIEW / FAIL with SHA-256 audit trail.</p>
-      <div class="how-tags">
-        <span class="tag">GFW Hansen GFC</span>
-        <span class="tag">SHA-256 hash</span>
-        <span class="tag">Immutable audit</span>
-      </div>
     </div>
     <div class="how-card reveal d2">
       <div class="how-num">3</div>
@@ -1221,9 +1211,9 @@ const translations = {
     'how.title':'Three steps.<br><em>One compliance package.</em>',
     'how.body':'From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.',
     'how.1.title':'Capture in the field',
-    'how.1.body':'Field technicians collect 16 CDAR data points per farm using our offline-capable mobile app. GPS polygon, labor indicators, FDRL consent — all in one visit.',
+    'how.1.body':'Field technicians collect all required data per farm using our offline-capable mobile app — location, labor indicators, and producer consent — all in one visit.',
     'how.2.title':'Verify by satellite',
-    'how.2.body':'Our pipeline cross-checks every farm polygon against Global Forest Watch Hansen GFC data. Post-2020 deforestation check. PASS / REVIEW / FAIL with SHA-256 audit trail.',
+    'how.2.body':'Our pipeline cross-checks every farm against satellite deforestation data. Post-2020 deforestation check. PASS / REVIEW / FAIL with a tamper-proof audit trail.',
     'how.3.title':'Deliver the package',
     'how.3.body':'A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance (FDRL). Ready to submit in EU TRACES NT.',
     'buyers.eyebrow':'For European importers',
@@ -1290,9 +1280,9 @@ const translations = {
     'how.title':'Tres pasos.<br><em>Un paquete de cumplimiento.</em>',
     'how.body':'Desde la captura GPS en el campo hasta un PDF listo para DDS en tu solicitud europea — totalmente automatizado, verificado por satélite.',
     'how.1.title':'Captura en el campo',
-    'how.1.body':'Los técnicos de campo recopilan 16 puntos de datos CDAR por finca con nuestra app móvil sin conexión. Polígono GPS, indicadores laborales, consentimiento FDRL — todo en una visita.',
+    'how.1.body':'Los técnicos de campo recopilan todos los datos requeridos por finca con nuestra app móvil sin conexión — ubicación, indicadores laborales y consentimiento del productor — todo en una visita.',
     'how.2.title':'Verificación por satélite',
-    'how.2.body':'Nuestro sistema verifica cada polígono de finca con datos Hansen GFC de Global Forest Watch. Control de deforestación post-2020. APROBADO / REVISIÓN / RECHAZADO con trazabilidad SHA-256.',
+    'how.2.body':'Nuestro sistema verifica cada finca con datos satelitales de deforestación. Control post-2020. APROBADO / REVISIÓN / RECHAZADO con trazabilidad a prueba de manipulaciones.',
     'how.3.title':'Entrega del paquete',
     'how.3.body':'Un PDF listo para DDS con los tres pilares ESG: Ambiental (EUDR), Social (LkSG/CSRD), Gobernanza (FDRL). Listo para enviar en EU TRACES NT.',
     'buyers.eyebrow':'Para importadores europeos',
@@ -1359,9 +1349,9 @@ const translations = {
     'how.title':'Trois étapes.<br><em>Un package de conformité.</em>',
     'how.body':'De la capture GPS sur le terrain à un PDF prêt pour le DDS pour votre soumission européenne — entièrement automatisé, vérifié par satellite.',
     'how.1.title':'Capture sur le terrain',
-    'how.1.body':'Les techniciens de terrain collectent 16 points de données CDAR par exploitation grâce à notre application mobile hors connexion. Polygone GPS, indicateurs de travail, consentement FDRL — en une seule visite.',
+    'how.1.body':'Les techniciens de terrain collectent toutes les données requises par exploitation grâce à notre application mobile hors connexion — localisation, indicateurs de travail et consentement du producteur — en une seule visite.',
     'how.2.title':'Vérification par satellite',
-    'how.2.body':'Notre pipeline croise chaque polygone d\'exploitation avec les données Hansen GFC de Global Forest Watch. Vérification de déforestation post-2020. RÉUSSI / EN RÉVISION / ÉCHOUÉ avec piste d\'audit SHA-256.',
+    'how.2.body':'Notre système croise chaque exploitation avec des données satellitaires de déforestation. Vérification post-2020. RÉUSSI / EN RÉVISION / ÉCHOUÉ avec une piste d\'audit inviolable.',
     'how.3.title':'Livraison du package',
     'how.3.body':'Un PDF prêt pour le DDS avec les trois piliers ESG : Environnemental (EUDR), Social (LkSG/CSRD), Gouvernance (FDRL). Prêt à soumettre dans EU TRACES NT.',
     'buyers.eyebrow':'Pour les importateurs européens',
@@ -1449,9 +1439,9 @@ translations.it = {
     'how.title':'Tre passi.<br><em>Un pacchetto di conformità.</em>',
     'how.body':'Dalla raccolta GPS sul campo a un PDF pronto per il DDS per la tua presentazione europea — completamente automatizzato, verificato via satellite.',
     'how.1.title':'Raccolta sul campo',
-    'how.1.body':'I tecnici di campo raccolgono 16 punti dati CDAR per azienda tramite la nostra app mobile offline. Poligono GPS, indicatori di lavoro, consenso FDRL — tutto in una sola visita.',
+    'how.1.body':'I tecnici di campo raccolgono tutti i dati richiesti per azienda tramite la nostra app mobile offline — posizione, indicatori di lavoro e consenso del produttore — tutto in una sola visita.',
     'how.2.title':'Verifica via satellite',
-    'how.2.body':'Il nostro sistema incrocia ogni poligono aziendale con i dati Hansen GFC di Global Forest Watch. Controllo della deforestazione post-2020. SUPERATO / IN REVISIONE / RESPINTO con traccia di audit SHA-256.',
+    'how.2.body':'Il nostro sistema incrocia ogni azienda con dati satellitari sulla deforestazione. Controllo post-2020. SUPERATO / IN REVISIONE / RESPINTO con una traccia di audit a prova di manomissione.',
     'how.3.title':'Consegna del pacchetto',
     'how.3.body':'Un PDF pronto per il DDS con i tre pilastri ESG: Ambientale (EUDR), Sociale (LkSG/CSRD), Governance (FDRL). Pronto per la presentazione in EU TRACES NT.',
     'buyers.eyebrow':'Per gli importatori europei',
