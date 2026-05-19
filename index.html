@@ -743,11 +743,13 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
   .mv-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: repeat(2,1fr); }
   .team-grid { grid-template-columns: 1fr; }
+  .numbers-header { flex-direction: column; align-items: flex-start; }
+  .photo-break-bg { background-attachment: scroll; }
+}
+@media (max-width: 768px) {
   .nav-links { display: none; }
   .lang-switcher { display: none; }
   .menu-toggle { display: flex; }
-  .numbers-header { flex-direction: column; align-items: flex-start; }
-  .photo-break-bg { background-attachment: scroll; }
 }
 @media (max-width: 600px) {
   .num-grid { grid-template-columns: 1fr; }
