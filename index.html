@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AgroDignity — Farm-level EUDR compliance infrastructure connecting Latin American producers with European buyers. EUDR, CSRD, LkSG ready.">
-<title>AgroDignity — Compliance infrastructure for cocoa supply chains</title>
+<meta name="description" content="AgroDignity — Farm-level EUDR compliance, verified at origin. Starting with Honduran coffee, built to extend to every regulated crop.">
+<title>AgroDignity — EUDR compliance infrastructure, verified at origin</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -253,45 +253,6 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
 .ticker-item .accent { color: var(--sky); }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ─── WHY NOW ─── */
-.numbers-section { padding: 100px var(--gut); background: var(--cream); }
-.numbers-header {
-  max-width: var(--max); margin: 0 auto 64px;
-  display: flex; justify-content: space-between; align-items: flex-end;
-  gap: 40px; flex-wrap: wrap;
-}
-.numbers-title {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 4vw, 58px);
-  font-weight: 300; color: var(--navy);
-  line-height: 1.1; letter-spacing: -0.02em;
-}
-.numbers-title em { font-style: italic; color: var(--green); }
-.numbers-sub {
-  font-size: 15px; color: var(--soft);
-  line-height: 1.75; max-width: 340px;
-}
-.num-grid {
-  max-width: var(--max); margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4,1fr);
-  border-top: 2px solid var(--navy);
-}
-.num-item {
-  padding: 40px 32px;
-  border-right: 1px solid var(--sand);
-  transition: background 0.3s;
-}
-.num-item:last-child { border-right: none; }
-.num-item:hover { background: var(--cream2); }
-.num-val {
-  font-family: var(--font-serif);
-  font-size: clamp(40px, 4.5vw, 64px);
-  font-weight: 600; color: var(--navy);
-  line-height: 1; margin-bottom: 8px;
-}
-.num-val .green { color: var(--green); }
-.num-label { font-size: 13px; font-weight: 500; color: var(--soft); line-height: 1.5; }
-
 /* ─── SECTION COMMON ─── */
 .section-eyebrow {
   font-size: 11px; font-weight: 700;
@@ -469,35 +430,23 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
 }
 .pp-body { font-size: 14px; color: var(--soft); line-height: 1.75; }
 
-/* ─── WHY WE WIN ─── */
-.why-section { padding: 100px var(--gut); background: var(--cream2); }
-.why-grid {
-  display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 24px; margin-top: 48px;
-  max-width: var(--max); margin-left: auto; margin-right: auto;
-}
-.why-card {
-  background: var(--white);
-  border-radius: var(--r2); padding: 40px;
-  border: 1px solid var(--sand);
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.why-card:hover {
-  border-color: var(--green);
-  box-shadow: 0 8px 32px rgba(59,181,67,0.10);
-}
-.why-card-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px; color: var(--green);
-  letter-spacing: 0.1em; margin-bottom: 16px;
-  text-transform: uppercase;
-}
-.why-card-title {
+/* ─── MUSCLE (TWO BURDENS) ─── */
+.muscle-section { padding: 100px var(--gut); background: var(--cream2); text-align: center; }
+.muscle-quote {
   font-family: var(--font-serif);
-  font-size: 24px; font-weight: 600;
-  color: var(--navy); margin-bottom: 10px; line-height: 1.2;
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 300; font-style: italic;
+  color: var(--navy); line-height: 1.4;
+  max-width: 760px; margin: 8px auto 56px;
 }
-.why-card-body { font-size: 14px; color: var(--soft); line-height: 1.8; }
+.muscle-section .mv-grid {
+  text-align: left;
+  max-width: var(--max); margin: 0 auto;
+}
+.muscle-close {
+  font-size: 16px; color: var(--soft);
+  line-height: 1.8; max-width: 540px; margin: 40px auto 0;
+}
 
 /* ─── MISSION ─── */
 .mission-section { padding: 100px var(--gut); background: var(--cream); }
@@ -756,10 +705,10 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <span class="adg-sub">AgroDignity Global</span>
   </div>
   <ul class="nav-links">
+    <li><a href="#model" data-i18n="nav.model">Why AgroDignity</a></li>
     <li><a href="#how" data-i18n="nav.how">How it works</a></li>
     <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
     <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
-    <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
     <li><a href="#team" data-i18n="nav.team">Team</a></li>
     <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Get in touch</a></li>
   </ul>
@@ -776,10 +725,10 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
+    <li><a href="#model" data-i18n="nav.model">Why AgroDignity</a></li>
     <li><a href="#how" data-i18n="nav.how">How it works</a></li>
     <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
     <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
-    <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
     <li><a href="#team" data-i18n="nav.team">Team</a></li>
   </ul>
   <a href="#contact" class="mobile-cta" data-i18n="nav.cta">Get in touch</a>
@@ -798,7 +747,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div class="hero-text">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-line"></div>
-        <span data-i18n="hero.eyebrow">EUDR · CSRD · LkSG compliance infrastructure</span>
+        <span data-i18n="hero.eyebrow">EUDR compliance infrastructure · Coffee first</span>
       </div>
       <h1 class="hero-title" data-i18n-html="hero.title">
         Farm data<br>
@@ -806,11 +755,11 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <strong>Verified at origin.</strong>
       </h1>
       <p class="hero-body" data-i18n="hero.body">
-        EUDR enforcement begins December 2026. European importers need verified farm-level data — and producers deserve fair value for what they provide. AgroDignity delivers both.
+        EUDR enforcement begins December 2026. We verify Honduran coffee farms today — built to extend to cacao and every regulated crop next.
       </p>
       <div class="hero-actions">
-        <a href="#buyers" class="btn btn-green" data-i18n="hero.btn1">For European buyers ↗</a>
-        <a href="#how" class="btn btn-ghost" data-i18n="hero.btn2">See how it works</a>
+        <a href="#buyers" class="btn btn-green" data-i18n="hero.btn1">For EU importers ↗</a>
+        <a href="#producers" class="btn btn-ghost" data-i18n="hero.btn2">For producers ↗</a>
       </div>
     </div>
 
@@ -827,29 +776,48 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 <!-- ══ TICKER ══ -->
 <div class="ticker">
   <div class="ticker-track">
-    <span class="ticker-item">EUDR enforcement · <span class="accent">Dec 30, 2026</span></span>
-    <span class="ticker-item">Farm-level DDS · <span class="accent">TRACES NT ready</span></span>
-    <span class="ticker-item">CSRD Scope 3 · <span class="accent">LkSG due diligence</span></span>
-    <span class="ticker-item"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
-    <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
+    <span class="ticker-item">Honduras coffee pilot · <span class="accent">CAPUCAS &amp; PROEXO</span></span>
+    <span class="ticker-item">EUDR enforcement · <span class="accent">December 2026</span></span>
     <span class="ticker-item">Satellite verified · <span class="accent">Tamper-proof audit trail</span></span>
+    <span class="ticker-item">Coffee today · <span class="accent">Open to every EUDR crop</span></span>
+    <span class="ticker-item"><span class="accent">Data with Dignity</span> · Revenue returns to origin</span>
+    <span class="ticker-item">TRACES NT ready · <span class="accent">DDS on submission</span></span>
     <!-- repeat for seamless loop -->
-    <span class="ticker-item">EUDR enforcement · <span class="accent">Dec 30, 2026</span></span>
-    <span class="ticker-item">Farm-level DDS · <span class="accent">TRACES NT ready</span></span>
-    <span class="ticker-item">CSRD Scope 3 · <span class="accent">LkSG due diligence</span></span>
-    <span class="ticker-item"><span class="accent">Data with Dignity</span> · Revenue to producers</span>
-    <span class="ticker-item">Coffee · Cacao · Soy · Palm Oil · <span class="accent">All EUDR commodities</span></span>
+    <span class="ticker-item">Honduras coffee pilot · <span class="accent">CAPUCAS &amp; PROEXO</span></span>
+    <span class="ticker-item">EUDR enforcement · <span class="accent">December 2026</span></span>
     <span class="ticker-item">Satellite verified · <span class="accent">Tamper-proof audit trail</span></span>
+    <span class="ticker-item">Coffee today · <span class="accent">Open to every EUDR crop</span></span>
+    <span class="ticker-item"><span class="accent">Data with Dignity</span> · Revenue returns to origin</span>
+    <span class="ticker-item">TRACES NT ready · <span class="accent">DDS on submission</span></span>
   </div>
 </div>
 
+<!-- ══ THE MUSCLE BETWEEN TWO BURDENS ══ -->
+<section class="muscle-section" id="model">
+  <div class="container">
+    <div class="section-eyebrow reveal" style="justify-content:center" data-i18n="model.eyebrow">Why AgroDignity exists</div>
+    <h2 class="section-title reveal" data-i18n-html="model.title">The muscle<br><em>between two burdens.</em></h2>
+    <p class="muscle-quote reveal" data-i18n-html="model.quote">Insight without income is advice.<br>Income without insight is charity.</p>
+    <div class="mv-grid">
+      <div class="mv-card reveal">
+        <div class="mv-label" data-i18n="model.card1.label">The producer's burden</div>
+        <div class="mv-text" data-i18n="model.card1.text">Proving origin costs labor the smallholder is never paid for — and the data it produces is worth more than they ever see.</div>
+      </div>
+      <div class="mv-card reveal d1">
+        <div class="mv-label" data-i18n="model.card2.label">The importer's burden</div>
+        <div class="mv-text" data-i18n="model.card2.text">Proving origin under EUDR falls hardest on operators too small to carry a compliance department — with penalties of up to 4% of turnover.</div>
+      </div>
+    </div>
+    <p class="muscle-close reveal" data-i18n="model.close">AgroDignity sits between them. One verification, paid once, discharges both.</p>
+  </div>
+</section>
 
 <!-- ══ HOW IT WORKS ══ -->
 <section class="how-section" id="how">
   <div class="container">
     <div class="section-eyebrow reveal" data-i18n="how.eyebrow">How it works</div>
     <h2 class="section-title reveal" data-i18n-html="how.title">Three steps.<br><em>One compliance package.</em></h2>
-    <p class="section-body reveal" data-i18n="how.body">From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.</p>
+    <p class="section-body reveal" data-i18n="how.body">From GPS capture to a DDS-ready file for EU TRACES NT — satellite-verified, starting with coffee, built for any regulated crop.</p>
   </div>
   <div class="how-grid container">
     <div class="how-card reveal">
@@ -861,7 +829,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </svg>
       </div>
       <h3 class="how-title" data-i18n="how.1.title">Capture in the field</h3>
-      <p class="how-body" data-i18n="how.1.body">Field technicians collect all required data per farm using our offline-capable mobile app — location, labor indicators, and producer consent — all in one visit.</p>
+      <p class="how-body" data-i18n="how.1.body">One visit. A field technician records GPS boundaries, practices, and consent using an offline app — no paperwork, no repeat visits.</p>
     </div>
     <div class="how-card reveal d1">
       <div class="how-num">2</div>
@@ -873,7 +841,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </svg>
       </div>
       <h3 class="how-title" data-i18n="how.2.title">Verify by satellite</h3>
-      <p class="how-body" data-i18n="how.2.body">Our pipeline cross-checks every farm against satellite deforestation data. Post-2020 deforestation check. PASS / REVIEW / FAIL with a tamper-proof audit trail.</p>
+      <p class="how-body" data-i18n="how.2.body">Every farm is checked against satellite deforestation data, post-2020. PASS, REVIEW, or FAIL — with a tamper-proof audit trail.</p>
     </div>
     <div class="how-card reveal d2">
       <div class="how-num">3</div>
@@ -885,7 +853,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </svg>
       </div>
       <h3 class="how-title" data-i18n="how.3.title">Deliver the package</h3>
-      <p class="how-body" data-i18n="how.3.body">A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance. Ready to submit in EU TRACES NT.</p>
+      <p class="how-body" data-i18n="how.3.body">A DDS-ready file covering EUDR, CSRD and LkSG — ready to submit in EU TRACES NT.</p>
       <div class="how-tags">
         <span class="tag">DDS-ready</span>
         <span class="tag">TRACES NT</span>
@@ -901,8 +869,8 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div>
       <div class="section-eyebrow sky reveal" data-i18n="buyers.eyebrow">For European importers</div>
       <h2 class="section-title on-dark reveal" data-i18n-html="buyers.title">Your supply chain.<br><em>Fully documented.</em></h2>
-      <p class="section-body on-dark reveal" data-i18n="buyers.body">EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete, audit-ready compliance package per farm — nothing left to chance.</p>
-      <a href="#contact" class="btn btn-cream reveal" style="margin-top:8px" data-i18n="buyers.cta">Request a demo ↗</a>
+      <p class="section-body on-dark reveal" data-i18n="buyers.body">EUDR requires verified geolocation and deforestation data per farm. We deliver an audit-ready package — priced per container moved, not per company size.</p>
+      <a href="mailto:info@agrodignity.com?subject=EU%20importer%20inquiry" class="btn btn-cream reveal" style="margin-top:8px" data-i18n="buyers.cta">Talk to our team ↗</a>
     </div>
     <div class="product-cards">
       <div class="product-card reveal">
@@ -913,7 +881,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </div>
         <div>
           <div class="product-name" data-i18n="product.1.name">EUDR Compliance Package</div>
-          <div class="product-desc" data-i18n="product.1.desc">GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.</div>
+          <div class="product-desc" data-i18n="product.1.desc">GPS polygon, deforestation check, DDS-ready file — verified by satellite.</div>
           <div class="product-reg">EUDR 2023/1115 · Art. 4 + Art. 9</div>
         </div>
       </div>
@@ -926,7 +894,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </div>
         <div>
           <div class="product-name" data-i18n="product.2.name">ESG Score per Farm</div>
-          <div class="product-desc" data-i18n="product.2.desc">Three-pillar ESG score: Environmental, Social, Governance. Satisfies CSRD Scope 3 reporting for your supply chain.</div>
+          <div class="product-desc" data-i18n="product.2.desc">Three-pillar ESG score — Environmental, Social, Governance — for CSRD Scope 3 reporting.</div>
           <div class="product-reg">CSRD 2022/2464 · ESRS S2 + E1</div>
         </div>
       </div>
@@ -938,7 +906,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         </div>
         <div>
           <div class="product-name" data-i18n="product.3.name">Due Diligence Data Pack</div>
-          <div class="product-desc" data-i18n="product.3.desc">Labor indicators, land tenure verification, producer consent records. Ready for LkSG and CSDDD audit requirements.</div>
+          <div class="product-desc" data-i18n="product.3.desc">Labor indicators, land tenure, consent records — ready for LkSG and CSDDD.</div>
           <div class="product-reg">LkSG §5 · CSDDD Art. 6</div>
         </div>
       </div>
@@ -963,29 +931,29 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div>
       <div class="section-eyebrow reveal" data-i18n="producers.eyebrow">For producers</div>
       <h2 class="section-title reveal" data-i18n-html="producers.title">Your data.<br><em>Your value.</em></h2>
-      <p class="producers-text reveal" data-i18n="producers.body">AgroDignity is the only platform that routes data revenue directly back to the producer. What your data earns in European markets returns to you — not to intermediaries.</p>
-      <a href="#contact" class="btn btn-outline-navy reveal" style="margin-top:8px" data-i18n="producers.cta">Talk to us ↗</a>
+      <p class="producers-text reveal" data-i18n="producers.body">Your farm's second harvest is its data — captured, sold, and never returned. AgroDignity returns it: verified income, plus the insight others already have about you.</p>
+      <a href="mailto:info@agrodignity.com?subject=Producer%20inquiry" class="btn btn-outline-navy reveal" style="margin-top:8px" data-i18n="producers.cta">Talk to us ↗</a>
     </div>
     <div class="producers-points">
       <div class="producer-point reveal">
         <div class="pp-num">01</div>
         <div>
           <div class="pp-title" data-i18n="pp.1.title">One visit. All data captured.</div>
-          <div class="pp-body" data-i18n="pp.1.body">A field technician visits once. All data points are collected in a single offline form — no paperwork, no repetition, no disruption to your work.</div>
+          <div class="pp-body" data-i18n="pp.1.body">A single field visit, offline app, no repeat paperwork.</div>
         </div>
       </div>
       <div class="producer-point reveal d1">
         <div class="pp-num">02</div>
         <div>
           <div class="pp-title" data-i18n="pp.2.title">You own your data</div>
-          <div class="pp-body" data-i18n="pp.2.body">Producers retain full control over their information and can withdraw consent at any time. Data sovereignty is built into the platform — not an afterthought.</div>
+          <div class="pp-body" data-i18n="pp.2.body">Producers hold real decision rights through their cooperative's own governance committee — not just a payment someone else set the size of.</div>
         </div>
       </div>
       <div class="producer-point reveal d2">
         <div class="pp-num">03</div>
         <div>
-          <div class="pp-title" data-i18n="pp.3.title">Data revenue returns to you</div>
-          <div class="pp-body" data-i18n="pp.3.body">A share of every data transaction goes directly back to the producer who generated it. No intermediaries extracting value at the source.</div>
+          <div class="pp-title" data-i18n="pp.3.title">Revenue returns to you</div>
+          <div class="pp-body" data-i18n="pp.3.body">A fixed share of every transaction goes back to the producer who generated the data — before profit, before overhead.</div>
         </div>
       </div>
     </div>
@@ -1001,12 +969,38 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <div class="mv-grid">
       <div class="mv-card reveal">
         <div class="mv-label" data-i18n="mission.label">Mission</div>
-        <div class="mv-text" data-i18n="mission.text">We bridge knowledge and technology between actors in the global food system — building the capabilities for each actor to manage their own decisions and direct their own future.</div>
+        <div class="mv-text" data-i18n="mission.text">We build the infrastructure that lets smallholders capture the value of their own data.</div>
       </div>
       <div class="mv-card reveal d1">
         <div class="mv-label" data-i18n="vision.label">Vision</div>
-        <div class="mv-text" data-i18n="vision.text">To be the pioneers of accessible systems where data from food systems generates value at its origin — and returns that value to the people who created it.</div>
+        <div class="mv-text" data-i18n="vision.text">A food system where insight and income both flow back to the people who grow the food.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ TRACTION ══ -->
+<section class="traction-section" id="traction">
+  <div class="container">
+    <div class="section-eyebrow reveal" data-i18n="traction.eyebrow">Where we are</div>
+    <h2 class="section-title reveal" data-i18n-html="traction.title">Early execution.<br><em>Real signatures.</em></h2>
+  </div>
+  <div class="traction-grid container">
+    <div class="traction-card reveal">
+      <div class="traction-label" data-i18n="traction.1.label">Signed</div>
+      <div class="traction-value" data-i18n="traction.1.value">MOU, Rome — April 2026</div>
+      <div class="traction-desc" data-i18n="traction.1.desc">Field operations agreement with Fundación para la Investigación y el Desarrollo, plus a technical cooperation agreement with SAG Honduras.</div>
+    </div>
+    <div class="traction-card reveal d1">
+      <div class="traction-label" data-i18n="traction.2.label">Piloting</div>
+      <div class="traction-value" data-i18n="traction.2.value">1,300+ producers</div>
+      <div class="traction-desc" data-i18n="traction.2.desc">Two Honduran coffee cooperatives, CAPUCAS and PROEXO, with 400+ farm records already GPS-verified.</div>
+    </div>
+    <div class="traction-card reveal d2">
+      <div class="traction-label" data-i18n="traction.3.label">Validated</div>
+      <div class="traction-value" data-i18n="traction.3.value">Independent academic review</div>
+      <div class="traction-desc" data-i18n="traction.3.desc">Governance model under evaluation by the Fair and Smart Data programme, Maastricht University.</div>
     </div>
   </div>
 </section>
@@ -1026,7 +1020,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <div class="team-role">Co-founder · CEO · Chief Executive Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc" data-i18n="team.1.desc">International food law · Agricultural policy · Deep expertise in EU regulatory frameworks and Latin American food systems.</p>
+        <p class="team-desc" data-i18n="team.1.desc">25 years in international agricultural policy. Former Alternate Permanent Representative of Honduras to FAO, IFAD and WFP in Rome. LL.M., Global Food Law.</p>
       </div>
     </div>
     <div class="team-card reveal d1">
@@ -1036,7 +1030,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <div class="team-role">Co-founder · CTO · Chief Technology Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc" data-i18n="team.2.desc">Data analysis · Technological infrastructure · Architect of the satellite verification pipeline and offline field data platform.</p>
+        <p class="team-desc" data-i18n="team.2.desc">Agroindustrial engineer and active FAO consultant. Coordinated 81 field technicians and the legalization of 2,000+ rural cooperatives at PRONADERS, Honduras.</p>
       </div>
     </div>
     <div class="team-card reveal d2">
@@ -1046,7 +1040,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
         <div class="team-role">Co-founder · COO · Chief Operating Officer</div>
       </div>
       <div class="team-body">
-        <p class="team-desc" data-i18n="team.3.desc">Agri-food systems · Sustainable markets · Based in Trieste, Italy — bridging producer networks in Latin America with European buyer relationships.</p>
+        <p class="team-desc" data-i18n="team.3.desc">Doctoral researcher in circular economy, University of Trieste. Leads EU market access and academic validation from Italy.</p>
       </div>
     </div>
   </div>
@@ -1060,7 +1054,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <h2 class="contact-title" data-i18n-html="contact.title">Let's build<br><em>something dignified.</em></h2>
     <p class="contact-body" data-i18n="contact.body">Whether you're an importer, a cooperative, a researcher, or just curious about what we're building — we'd love to hear from you.</p>
     <div class="contact-actions">
-      <a href="mailto:info@agrodignity.com" class="btn btn-green" data-i18n="contact.btn1">Get in touch ↗</a>
+      <a href="mailto:info@agrodignity.com?subject=General%20inquiry" class="btn btn-green" data-i18n="contact.btn1">Get in touch ↗</a>
       <a href="#how" class="btn btn-ghost" data-i18n="contact.btn2">Learn more</a>
     </div>
     <div class="contact-meta" data-i18n="contact.meta">Trieste, Italy &nbsp;·&nbsp; Roma, Italy &nbsp;·&nbsp; Tegucigalpa, Honduras</div>
@@ -1105,87 +1099,74 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 /* ── TRANSLATIONS ── */
 const translations = {
   en: {
-    'nav.how':'How it works','nav.buyers':'For buyers','nav.producers':'For producers',
-    'nav.mission':'Mission','nav.team':'Team','nav.cta':'Get in touch',
-    'hero.eyebrow':'EUDR · CSRD · LkSG compliance infrastructure',
+    'nav.model':'Why AgroDignity','nav.how':'How it works','nav.buyers':'For buyers','nav.producers':'For producers',
+    'nav.team':'Team','nav.cta':'Get in touch',
+    'hero.eyebrow':'EUDR compliance infrastructure · Coffee first',
     'hero.title':'Farm data<br><em>with dignity.</em><strong>Verified at origin.</strong>',
-    'hero.body':'EUDR enforcement begins December 2026. European importers need verified farm-level data — and producers deserve fair value for what they provide. AgroDignity delivers both.',
-    'hero.btn1':'For European buyers ↗','hero.btn2':'See how it works',
+    'hero.body':'EUDR enforcement begins December 2026. We verify Honduran coffee farms today — built to extend to cacao and every regulated crop next.',
+    'hero.btn1':'For EU importers ↗','hero.btn2':'For producers ↗',
     'hero.visual.tag':'Verified at origin',
     'hero.visual.quote':'"From harvest to compliance package — traceable, dignified, yours."',
-    'whynow.eyebrow':'Why now',
-    'whynow.title':'The window<br>is <em>open now.</em>',
-    'whynow.sub':'EUDR enforcement begins December 2026. Every large cocoa and coffee importer in Europe must have verified farm-level data. Most don\'t.',
-    'num.1':'EUDR enforcement for large & medium operators — farm-level DDS required',
-    'num.2':'smallholder farmers globally producing EUDR-regulated commodities',
-    'num.3':'one platform covering EUDR, CSRD Scope 3, and LkSG simultaneously',
-    'num.4':'data revenue returned to producers by existing compliance tools — we change that',
+    'model.eyebrow':'Why AgroDignity exists',
+    'model.title':'The muscle<br><em>between two burdens.</em>',
+    'model.quote':'Insight without income is advice.<br>Income without insight is charity.',
+    'model.card1.label':'The producer\'s burden',
+    'model.card1.text':'Proving origin costs labor the smallholder is never paid for — and the data it produces is worth more than they ever see.',
+    'model.card2.label':'The importer\'s burden',
+    'model.card2.text':'Proving origin under EUDR falls hardest on operators too small to carry a compliance department — with penalties of up to 4% of turnover.',
+    'model.close':'AgroDignity sits between them. One verification, paid once, discharges both.',
     'how.eyebrow':'How it works',
     'how.title':'Three steps.<br><em>One compliance package.</em>',
-    'how.body':'From GPS capture in the field to a DDS-ready PDF for your European submission — fully automated, satellite-verified.',
+    'how.body':'From GPS capture to a DDS-ready file for EU TRACES NT — satellite-verified, starting with coffee, built for any regulated crop.',
     'how.1.title':'Capture in the field',
-    'how.1.body':'Field technicians collect all required data per farm using our offline-capable mobile app — location, labor indicators, and producer consent — all in one visit.',
+    'how.1.body':'One visit. A field technician records GPS boundaries, practices, and consent using an offline app — no paperwork, no repeat visits.',
     'how.2.title':'Verify by satellite',
-    'how.2.body':'Our pipeline cross-checks every farm against satellite deforestation data. Post-2020 deforestation check. PASS / REVIEW / FAIL with a tamper-proof audit trail.',
+    'how.2.body':'Every farm is checked against satellite deforestation data, post-2020. PASS, REVIEW, or FAIL — with a tamper-proof audit trail.',
     'how.3.title':'Deliver the package',
-    'how.3.body':'A DDS-ready PDF with all three ESG pillars: Environmental (EUDR), Social (LkSG/CSRD), Governance. Ready to submit in EU TRACES NT.',
+    'how.3.body':'A DDS-ready file covering EUDR, CSRD and LkSG — ready to submit in EU TRACES NT.',
     'buyers.eyebrow':'For European importers',
     'buyers.title':'Your supply chain.<br><em>Fully documented.</em>',
-    'buyers.body':'EUDR requires verified geolocation and deforestation data for every farm in your supply chain. We deliver a complete, audit-ready compliance package per farm — nothing left to chance.',
-    'buyers.cta':'Request a demo ↗',
+    'buyers.body':'EUDR requires verified geolocation and deforestation data per farm. We deliver an audit-ready package — priced per container moved, not per company size.',
+    'buyers.cta':'Talk to our team ↗',
     'product.1.name':'EUDR Compliance Package',
-    'product.1.desc':'GPS polygon + deforestation check + DDS-ready PDF. Everything the regulation requires, verified by satellite.',
+    'product.1.desc':'GPS polygon, deforestation check, DDS-ready file — verified by satellite.',
     'product.2.name':'ESG Score per Farm',
-    'product.2.desc':'Three-pillar ESG score: Environmental, Social, Governance. Satisfies CSRD Scope 3 reporting for your supply chain.',
+    'product.2.desc':'Three-pillar ESG score — Environmental, Social, Governance — for CSRD Scope 3 reporting.',
     'product.3.name':'Due Diligence Data Pack',
-    'product.3.desc':'Labor indicators, land tenure verification, producer consent records. Ready for LkSG and CSDDD audit requirements.',
+    'product.3.desc':'Labor indicators, land tenure, consent records — ready for LkSG and CSDDD.',
     'producers.quote':'"Dignity is the freedom to act,<br>the right to be <em>recognized,</em><br>and the equality shared by every human being."',
     'producers.eyebrow':'For producers',
     'producers.title':'Your data.<br><em>Your value.</em>',
-    'producers.body':'AgroDignity is the only platform that routes data revenue directly back to the producer. What your data earns in European markets returns to you — not to intermediaries.',
+    'producers.body':'Your farm\'s second harvest is its data — captured, sold, and never returned. AgroDignity returns it: verified income, plus the insight others already have about you.',
     'producers.cta':'Talk to us ↗',
     'pp.1.title':'One visit. All data captured.',
-    'pp.1.body':'A field technician visits once. All data points are collected in a single offline form — no paperwork, no repetition, no disruption to your work.',
+    'pp.1.body':'A single field visit, offline app, no repeat paperwork.',
     'pp.2.title':'You own your data',
-    'pp.2.body':'Producers retain full control over their information and can withdraw consent at any time. Data sovereignty is built into the platform — not an afterthought.',
-    'pp.3.title':'Data revenue returns to you',
-    'pp.3.body':'A share of every data transaction goes directly back to the producer who generated it. No intermediaries extracting value at the source.',
-    'why.eyebrow':'Our edge',
-    'why.title':'Four reasons<br><em>we win this market.</em>',
-    'why.1.label':'01 · Field-native workflow',
-    'why.1.title':'Built for smallholder farms, not adapted from enterprise tools',
-    'why.1.body':'Offline-first, single-visit collection — built from the field up, not adapted from enterprise tools.',
-    'why.2.label':'02 · Producer data rights',
-    'why.2.title':'Consent, sovereignty, and withdrawal — by design',
-    'why.2.body':'Data sovereignty is a contractual commitment — not a marketing claim. Farmers can withdraw at any time.',
-    'why.3.label':'03 · Satellite verification',
-    'why.3.title':'Not self-reported data — independently verified',
-    'why.3.body':'Every farm polygon is cross-checked against satellite deforestation data, with a tamper-proof audit trail — the standard EUDR and TRACES NT actually require.',
-    'why.4.label':'04 · Revenue redistribution model',
-    'why.4.title':'The only platform that returns data value to its origin',
-    'why.4.body':'A share of every data transaction flows back to the producer — building trust and a supply network no competitor can replicate.',
+    'pp.2.body':'Producers hold real decision rights through their cooperative\'s own governance committee — not just a payment someone else set the size of.',
+    'pp.3.title':'Revenue returns to you',
+    'pp.3.body':'A fixed share of every transaction goes back to the producer who generated the data — before profit, before overhead.',
     'mission.eyebrow':'Mission · Vision',
     'mission.title':'What we stand for.<br><em>Why it matters.</em>',
     'mission.label':'Mission',
-    'mission.text':'We bridge knowledge and technology between actors in the global food system — building the capabilities for each actor to manage their own decisions and direct their own future.',
+    'mission.text':'We build the infrastructure that lets smallholders capture the value of their own data.',
     'vision.label':'Vision',
-    'vision.text':'To be the pioneers of accessible systems where data from food systems generates value at its origin — and returns that value to the people who created it.',
+    'vision.text':'A food system where insight and income both flow back to the people who grow the food.',
     'traction.eyebrow':'Where we are',
-    'traction.title':'Early execution.<br><em>Clear next steps.</em>',
-    'traction.1.label':'Pilot · Honduras',
-    'traction.1.value':'Field workflow validated',
-    'traction.1.desc':'Data collection protocol tested with smallholder coffee cooperatives. Offline app workflow validated for low-connectivity environments and single-visit collection.',
-    'traction.2.label':'Pipeline · EU buyers',
-    'traction.2.value':'Active buyer conversations',
-    'traction.2.desc':'Conversations underway with European cocoa and coffee importers targeting the December 2026 EUDR deadline. DDS integration in development.',
-    'traction.3.label':'Fundraising · Seed',
-    'traction.3.value':'Seeking seed capital',
-    'traction.3.desc':'Raising to scale field operations across Latin America and onboard first paying European buyers before the Q4 2026 enforcement window.',
+    'traction.title':'Early execution.<br><em>Real signatures.</em>',
+    'traction.1.label':'Signed',
+    'traction.1.value':'MOU, Rome — April 2026',
+    'traction.1.desc':'Field operations agreement with Fundación para la Investigación y el Desarrollo, plus a technical cooperation agreement with SAG Honduras.',
+    'traction.2.label':'Piloting',
+    'traction.2.value':'1,300+ producers',
+    'traction.2.desc':'Two Honduran coffee cooperatives, CAPUCAS and PROEXO, with 400+ farm records already GPS-verified.',
+    'traction.3.label':'Validated',
+    'traction.3.value':'Independent academic review',
+    'traction.3.desc':'Governance model under evaluation by the Fair and Smart Data programme, Maastricht University.',
     'team.eyebrow':'The team',
     'team.title':'Built by people who know<br><em>the field and the regulation.</em>',
-    'team.1.desc':'International food law · Agricultural policy · Deep expertise in EU regulatory frameworks and Latin American food systems.',
-    'team.2.desc':'Data analysis · Technological infrastructure · Architect of the satellite verification pipeline and offline field data platform.',
-    'team.3.desc':'Agri-food systems · Sustainable markets · Based in Trieste, Italy — bridging producer networks in Latin America with European buyer relationships.',
+    'team.1.desc':'25 years in international agricultural policy. Former Alternate Permanent Representative of Honduras to FAO, IFAD and WFP in Rome. LL.M., Global Food Law.',
+    'team.2.desc':'Agroindustrial engineer and active FAO consultant. Coordinated 81 field technicians and the legalization of 2,000+ rural cooperatives at PRONADERS, Honduras.',
+    'team.3.desc':'Doctoral researcher in circular economy, University of Trieste. Leads EU market access and academic validation from Italy.',
     'contact.eyebrow':'Get in touch',
     'contact.title':'Let\'s build<br><em>something dignified.</em>',
     'contact.body':'Whether you\'re an importer, a cooperative, a researcher, or just curious about what we\'re building — we\'d love to hear from you.',
@@ -1195,271 +1176,232 @@ const translations = {
     'footer.legal':'© 2026 AgroDignity Initiative · All rights reserved'
   },
   es: {
-    'nav.how':'Cómo funciona','nav.buyers':'Para compradores','nav.producers':'Para productores',
-    'nav.mission':'Misión','nav.team':'Equipo','nav.cta':'Contáctanos',
-    'hero.eyebrow':'Infraestructura de cumplimiento EUDR · CSRD · LkSG',
+    'nav.model':'Por qué AgroDignity','nav.how':'Cómo funciona','nav.buyers':'Para compradores','nav.producers':'Para productores',
+    'nav.team':'Equipo','nav.cta':'Contáctanos',
+    'hero.eyebrow':'Infraestructura de cumplimiento EUDR · Café primero',
     'hero.title':'Datos del campo<br><em>con dignidad.</em><strong>Verificados en origen.</strong>',
-    'hero.body':'La EUDR entra en vigor en diciembre de 2026. Los importadores europeos necesitan datos verificados a nivel de finca — y los productores merecen un valor justo por lo que aportan. AgroDignity entrega ambas cosas.',
-    'hero.btn1':'Solicitar una demo ↗','hero.btn2':'Ver cómo funciona','hero.btn3':'Información para inversores ↗',
+    'hero.body':'La EUDR entra en vigor en diciembre de 2026. Verificamos fincas cafetaleras hondureñas hoy — construido para extenderse al cacao y a cada cultivo regulado.',
+    'hero.btn1':'Para importadores de la UE ↗','hero.btn2':'Para productores ↗',
     'hero.visual.tag':'Verificado en origen',
     'hero.visual.quote':'"De la cosecha al paquete de cumplimiento — trazable, digno, tuyo."',
-    'whynow.eyebrow':'Por qué ahora',
-    'whynow.title':'La ventana<br>está <em>abierta ahora.</em>',
-    'whynow.sub':'La EUDR entra en vigor en diciembre de 2026. Cada gran importador europeo de cacao y café necesita datos verificados a nivel de finca. La mayoría no los tiene.',
-    'num.1':'EUDR en vigor para operadores grandes y medianos — se requiere DDS a nivel de finca',
-    'num.2':'pequeños agricultores en todo el mundo produciendo materias primas reguladas por la EUDR',
-    'num.3':'una plataforma que cubre simultáneamente EUDR, CSRD Alcance 3 y LkSG',
-    'num.4':'ingresos de datos devueltos a los productores por herramientas existentes — nosotros lo cambiamos',
+    'model.eyebrow':'Por qué existe AgroDignity',
+    'model.title':'El músculo<br><em>entre dos cargas.</em>',
+    'model.quote':'La perspectiva sin ingreso es un consejo.<br>El ingreso sin perspectiva es caridad.',
+    'model.card1.label':'La carga del productor',
+    'model.card1.text':'Probar el origen cuesta trabajo que el pequeño productor nunca cobra — y los datos que genera valen más de lo que él mismo llega a ver.',
+    'model.card2.label':'La carga del importador',
+    'model.card2.text':'Probar el origen bajo la EUDR recae con más fuerza sobre operadores demasiado pequeños para tener un departamento de cumplimiento — con sanciones de hasta el 4% de la facturación.',
+    'model.close':'AgroDignity se sitúa entre ambos. Una sola verificación, pagada una vez, resuelve las dos cargas.',
     'how.eyebrow':'Cómo funciona',
     'how.title':'Tres pasos.<br><em>Un paquete de cumplimiento.</em>',
-    'how.body':'Desde la captura GPS en el campo hasta un PDF listo para DDS — totalmente automatizado, verificado por satélite.',
+    'how.body':'Desde la captura GPS hasta un archivo listo para DDS en EU TRACES NT — verificado por satélite, comenzando con café, construido para cualquier cultivo regulado.',
     'how.1.title':'Captura en el campo',
-    'how.1.body':'Los técnicos de campo recopilan todos los datos requeridos por finca con nuestra app móvil sin conexión — ubicación, indicadores laborales y consentimiento — todo en una visita.',
+    'how.1.body':'Una sola visita. Un técnico de campo registra los límites GPS, las prácticas y el consentimiento con una app offline — sin papeleo, sin visitas repetidas.',
     'how.2.title':'Verificación por satélite',
-    'how.2.body':'Nuestro sistema verifica cada finca con datos satelitales de deforestación. Control post-2020. APROBADO / REVISIÓN / RECHAZADO con trazabilidad a prueba de manipulaciones.',
+    'how.2.body':'Cada finca se contrasta con datos satelitales de deforestación posteriores a 2020. APROBADO, REVISIÓN o RECHAZADO — con trazabilidad a prueba de manipulaciones.',
     'how.3.title':'Entrega del paquete',
-    'how.3.body':'Un PDF listo para DDS con los tres pilares ESG: Ambiental (EUDR), Social (LkSG/CSRD), Gobernanza. Listo para enviar en EU TRACES NT.',
+    'how.3.body':'Un archivo listo para DDS que cubre EUDR, CSRD y LkSG — listo para enviar en EU TRACES NT.',
     'buyers.eyebrow':'Para importadores europeos',
     'buyers.title':'Tu cadena de suministro.<br><em>Completamente documentada.</em>',
-    'buyers.body':'La EUDR exige datos de geolocalización y deforestación verificados para cada finca. Entregamos un paquete de cumplimiento completo y listo para auditoría por finca.',
-    'buyers.cta':'Solicitar una demo ↗',
+    'buyers.body':'La EUDR exige datos de geolocalización y deforestación verificados por finca. Entregamos un paquete listo para auditoría — con precio por contenedor movido, no por tamaño de la empresa.',
+    'buyers.cta':'Habla con nuestro equipo ↗',
     'product.1.name':'Paquete de Cumplimiento EUDR',
-    'product.1.desc':'Polígono GPS + verificación de deforestación + PDF listo para DDS. Todo lo que la regulación exige, verificado por satélite.',
+    'product.1.desc':'Polígono GPS, verificación de deforestación, archivo listo para DDS — verificado por satélite.',
     'product.2.name':'Puntuación ESG por Finca',
-    'product.2.desc':'Puntuación ESG de tres pilares: Ambiental, Social, Gobernanza. Cumple con el Alcance 3 de CSRD para tu cadena de suministro.',
+    'product.2.desc':'Puntuación ESG de tres pilares — Ambiental, Social, Gobernanza — para el reporte de Alcance 3 de CSRD.',
     'product.3.name':'Paquete de Datos de Debida Diligencia',
-    'product.3.desc':'Indicadores laborales, verificación de tenencia de tierra, registros de consentimiento del productor. Listo para LkSG y CSDDD.',
+    'product.3.desc':'Indicadores laborales, tenencia de tierra, registros de consentimiento — listo para LkSG y CSDDD.',
     'producers.quote':'"La dignidad es la libertad de actuar,<br>el derecho a ser <em>reconocido,</em><br>y la igualdad que pertenece a todo ser humano."',
     'producers.eyebrow':'Para productores',
     'producers.title':'Tus datos.<br><em>Tu valor.</em>',
-    'producers.body':'AgroDignity es la única plataforma que canaliza los ingresos de datos directamente al productor. Lo que tus datos ganan en los mercados europeos regresa a ti — no a intermediarios.',
+    'producers.body':'La segunda cosecha de tu finca son sus datos — capturados, vendidos, y nunca devueltos. AgroDignity los devuelve: ingreso verificado, más la perspectiva que otros ya tienen sobre ti.',
     'producers.cta':'Habla con nosotros ↗',
     'pp.1.title':'Una visita. Todos los datos capturados.',
-    'pp.1.body':'Un técnico de campo visita una vez. Todos los datos se recopilan en un formulario offline — sin papeleo, sin repetición, sin interrupciones a tu trabajo.',
+    'pp.1.body':'Una sola visita de campo, app offline, sin papeleo repetido.',
     'pp.2.title':'Tú eres dueño de tus datos',
-    'pp.2.body':'Los productores mantienen el control total sobre su información y pueden retirar el consentimiento en cualquier momento. La soberanía de datos está integrada en la plataforma.',
-    'pp.3.title':'Los ingresos de datos regresan a ti',
-    'pp.3.body':'Una parte de cada transacción de datos va directamente al productor que los generó. Sin intermediarios que extraigan valor en el origen.',
-    'why.eyebrow':'Nuestra ventaja',
-    'why.title':'Cuatro razones<br><em>por las que ganamos este mercado.</em>',
-    'why.1.label':'01 · Flujo de trabajo nativo del campo',
-    'why.1.title':'Construido para pequeños agricultores, no adaptado desde herramientas empresariales',
-    'why.1.body':'Nuestra app móvil offline-first está diseñada para entornos de baja conectividad y recopilación en una sola visita. Los competidores adaptan herramientas empresariales hacia abajo. Nosotros construimos desde el campo.',
-    'why.2.label':'02 · Derechos de datos del productor',
-    'why.2.title':'Consentimiento, soberanía y retiro — por diseño',
-    'why.2.body':'Cada punto de datos se recopila bajo consentimiento explícito del productor. Los agricultores pueden retirarse en cualquier momento. La soberanía de datos es un compromiso contractual que ninguna herramienta genérica puede replicar.',
-    'why.3.label':'03 · Verificación satelital',
-    'why.3.title':'No datos autoreportados — verificados de forma independiente',
-    'why.3.body':'Cada polígono de finca se contrasta con datos satelitales de deforestación. El resultado — APROBADO, REVISIÓN o RECHAZADO — se almacena con trazabilidad a prueba de manipulaciones.',
-    'why.4.label':'04 · Modelo de redistribución de ingresos',
-    'why.4.title':'La única plataforma que devuelve el valor de los datos a su origen',
-    'why.4.body':'Una parte de cada transacción fluye de vuelta al productor. Esto construye relaciones duraderas que generan mejores datos y una red de suministro que ningún competidor puede replicar.',
+    'pp.2.body':'Los productores mantienen derechos de decisión reales a través del comité de gobernanza de su propia cooperativa — no solo un pago cuyo monto decidió alguien más.',
+    'pp.3.title':'Los ingresos regresan a ti',
+    'pp.3.body':'Una parte fija de cada transacción regresa al productor que generó los datos — antes de la utilidad, antes de los gastos generales.',
     'mission.eyebrow':'Misión · Visión',
     'mission.title':'Lo que defendemos.<br><em>Por qué importa.</em>',
     'mission.label':'Misión',
-    'mission.text':'Tendemos puentes de conocimiento y tecnología entre los actores del sistema alimentario global — generando las capacidades para que cada actor gestione sus propias decisiones y dirija su propio futuro.',
+    'mission.text':'Construimos la infraestructura que permite a los pequeños productores capturar el valor de sus propios datos.',
     'vision.label':'Visión',
-    'vision.text':'Ser los pioneros de sistemas accesibles donde los datos de los sistemas alimentarios generen valor en su origen — y devuelvan ese valor a las personas que los crearon.',
+    'vision.text':'Un sistema alimentario donde la perspectiva y el ingreso regresen a quienes cultivan los alimentos.',
     'traction.eyebrow':'Dónde estamos',
-    'traction.title':'Ejecución temprana.<br><em>Próximos pasos claros.</em>',
-    'traction.1.label':'Piloto · Honduras',
-    'traction.1.value':'Flujo de trabajo de campo validado',
-    'traction.1.desc':'Protocolo de recopilación de datos probado con cooperativas de café. Flujo de trabajo de app offline validado para entornos de baja conectividad.',
-    'traction.2.label':'Pipeline · compradores UE',
-    'traction.2.value':'Conversaciones activas con compradores',
-    'traction.2.desc':'Conversaciones en curso con importadores europeos de cacao y café con miras al plazo de la EUDR de diciembre de 2026. Integración DDS en desarrollo.',
-    'traction.3.label':'Financiación · Semilla',
-    'traction.3.value':'Buscando capital semilla',
-    'traction.3.desc':'Recaudando para escalar operaciones de campo en América Latina e incorporar los primeros compradores europeos antes del T4 2026.',
+    'traction.title':'Ejecución temprana.<br><em>Firmas reales.</em>',
+    'traction.1.label':'Firmado',
+    'traction.1.value':'MOU, Roma — abril 2026',
+    'traction.1.desc':'Acuerdo de operaciones de campo con la Fundación para la Investigación y el Desarrollo, más un convenio de cooperación técnica con la SAG de Honduras.',
+    'traction.2.label':'En piloto',
+    'traction.2.value':'1.300+ productores',
+    'traction.2.desc':'Dos cooperativas cafetaleras hondureñas, CAPUCAS y PROEXO, con más de 400 fincas ya verificadas por GPS.',
+    'traction.3.label':'Validado',
+    'traction.3.value':'Revisión académica independiente',
+    'traction.3.desc':'Modelo de gobernanza en evaluación por el programa Fair and Smart Data de la Universidad de Maastricht.',
     'team.eyebrow':'El equipo',
     'team.title':'Construido por personas que conocen<br><em>el campo y la regulación.</em>',
-    'team.1.desc':'Derecho alimentario internacional · Política agrícola · Amplia experiencia en marcos regulatorios de la UE y sistemas alimentarios latinoamericanos.',
-    'team.2.desc':'Análisis de datos · Infraestructura tecnológica · Arquitecto del pipeline de verificación satelital y la plataforma de datos de campo offline.',
-    'team.3.desc':'Sistemas agroalimentarios · Mercados sostenibles · Basada en Trieste, Italia — conectando redes de productores en América Latina con compradores europeos.',
+    'team.1.desc':'25 años en política agrícola internacional. Ex Representante Permanente Alterna de Honduras ante la FAO, el FIDA y el PMA en Roma. LL.M. en Derecho Alimentario Global.',
+    'team.2.desc':'Ingeniero agroindustrial y consultor activo de la FAO. Coordinó a 81 técnicos de campo y la legalización de más de 2.000 cooperativas rurales en PRONADERS, Honduras.',
+    'team.3.desc':'Investigadora doctoral en economía circular, Universidad de Trieste. Lidera el acceso al mercado europeo y la validación académica desde Italia.',
     'contact.eyebrow':'Contáctanos',
-    'contact.title':'¿Listo para hablar<br><em>de EUDR — o invertir?</em>',
-    'contact.body':'Ya seas un importador europeo preparándose para diciembre de 2026, o un inversor interesado en el espacio de infraestructura de cumplimiento — nos encantaría conectar.',
-    'contact.btn1':'Contáctanos ↗','contact.btn2':'Consulta de inversión ↗',
+    'contact.title':'Construyamos<br><em>algo digno.</em>',
+    'contact.body':'Ya seas importador, cooperativa, investigador, o simplemente sientas curiosidad por lo que construimos — nos encantaría saber de ti.',
+    'contact.btn1':'Contáctanos ↗','contact.btn2':'Saber más',
     'contact.meta':'Trieste, Italia · Roma, Italia · Tegucigalpa, Honduras',
     'footer.tagline':'El valor de los datos, de vuelta a su origen',
     'footer.legal':'© 2026 AgroDignity Initiative · Todos los derechos reservados'
   },
   fr: {
-    'nav.how':'Comment ça marche','nav.buyers':'Pour les acheteurs','nav.producers':'Pour les producteurs',
-    'nav.mission':'Mission','nav.team':'Équipe','nav.cta':'Nous contacter',
-    'hero.eyebrow':'Infrastructure de conformité EUDR · CSRD · LkSG',
+    'nav.model':'Pourquoi AgroDignity','nav.how':'Comment ça marche','nav.buyers':'Pour les acheteurs','nav.producers':'Pour les producteurs',
+    'nav.team':'Équipe','nav.cta':'Nous contacter',
+    'hero.eyebrow':'Infrastructure de conformité EUDR · Café d\'abord',
     'hero.title':'Données agricoles<br><em>avec dignité.</em><strong>Vérifiées à l\'origine.</strong>',
-    'hero.body':'L\'application de l\'EUDR commence en décembre 2026. Les importateurs européens ont besoin de données vérifiées au niveau exploitation — et les producteurs méritent une juste valeur. AgroDignity répond aux deux.',
-    'hero.btn1':'Demander une démo ↗','hero.btn2':'Voir comment ça marche','hero.btn3':'Information investisseurs ↗',
+    'hero.body':'L\'application de l\'EUDR commence en décembre 2026. Nous vérifions aujourd\'hui les fermes caféières du Honduras — conçu pour s\'étendre au cacao et à toute culture réglementée.',
+    'hero.btn1':'Pour les importateurs UE ↗','hero.btn2':'Pour les producteurs ↗',
     'hero.visual.tag':'Vérifié à l\'origine',
     'hero.visual.quote':'« De la récolte au dossier de conformité — traçable, digne, à vous. »',
-    'whynow.eyebrow':'Pourquoi maintenant',
-    'whynow.title':'La fenêtre<br>est <em>ouverte maintenant.</em>',
-    'whynow.sub':'L\'application de l\'EUDR commence en décembre 2026. Chaque grand importateur européen de cacao et de café doit disposer de données vérifiées au niveau exploitation. La plupart ne les ont pas.',
-    'num.1':'Application EUDR pour les grands et moyens opérateurs — DDS au niveau exploitation requis',
-    'num.2':'petits agriculteurs dans le monde produisant des matières premières réglementées par l\'EUDR',
-    'num.3':'une plateforme couvrant simultanément EUDR, CSRD Scope 3 et LkSG',
-    'num.4':'revenus de données restitués aux producteurs par les outils existants — nous changeons cela',
+    'model.eyebrow':'Pourquoi AgroDignity existe',
+    'model.title':'Le muscle<br><em>entre deux charges.</em>',
+    'model.quote':'La perspective sans revenu n\'est qu\'un conseil.<br>Le revenu sans perspective n\'est que charité.',
+    'model.card1.label':'La charge du producteur',
+    'model.card1.text':'Prouver l\'origine coûte un travail que le petit producteur n\'est jamais payé — et les données qu\'il génère valent plus que ce qu\'il en verra jamais.',
+    'model.card2.label':'La charge de l\'importateur',
+    'model.card2.text':'Prouver l\'origine sous l\'EUDR pèse le plus sur les opérateurs trop petits pour avoir un service conformité — avec des sanctions pouvant atteindre 4% du chiffre d\'affaires.',
+    'model.close':'AgroDignity se place entre les deux. Une seule vérification, payée une fois, résout les deux charges.',
     'how.eyebrow':'Comment ça marche',
     'how.title':'Trois étapes.<br><em>Un package de conformité.</em>',
-    'how.body':'De la capture GPS sur le terrain à un PDF prêt pour le DDS — entièrement automatisé, vérifié par satellite.',
+    'how.body':'De la capture GPS à un dossier prêt pour le DDS sur EU TRACES NT — vérifié par satellite, en commençant par le café, conçu pour toute culture réglementée.',
     'how.1.title':'Capture sur le terrain',
-    'how.1.body':'Les techniciens de terrain collectent toutes les données requises par exploitation grâce à notre app mobile hors connexion — localisation, indicateurs de travail et consentement — en une seule visite.',
+    'how.1.body':'Une seule visite. Un technicien de terrain enregistre les limites GPS, les pratiques et le consentement via une app hors ligne — sans paperasse, sans visites répétées.',
     'how.2.title':'Vérification par satellite',
-    'how.2.body':'Notre système croise chaque exploitation avec des données satellitaires de déforestation. Vérification post-2020. RÉUSSI / EN RÉVISION / ÉCHOUÉ avec une piste d\'audit inviolable.',
+    'how.2.body':'Chaque exploitation est vérifiée par rapport aux données satellitaires de déforestation postérieures à 2020. RÉUSSI, EN RÉVISION ou ÉCHOUÉ — avec une piste d\'audit inviolable.',
     'how.3.title':'Livraison du package',
-    'how.3.body':'Un PDF prêt pour le DDS avec les trois piliers ESG : Environnemental (EUDR), Social (LkSG/CSRD), Gouvernance. Prêt à soumettre dans EU TRACES NT.',
+    'how.3.body':'Un dossier prêt pour le DDS couvrant EUDR, CSRD et LkSG — prêt à soumettre dans EU TRACES NT.',
     'buyers.eyebrow':'Pour les importateurs européens',
     'buyers.title':'Votre chaîne d\'approvisionnement.<br><em>Entièrement documentée.</em>',
-    'buyers.body':'L\'EUDR exige des données vérifiées pour chaque exploitation. Nous livrons un dossier de conformité complet et prêt pour l\'audit par exploitation.',
-    'buyers.cta':'Demander une démo ↗',
+    'buyers.body':'L\'EUDR exige des données de géolocalisation et de déforestation vérifiées par exploitation. Nous livrons un dossier prêt pour l\'audit — facturé par conteneur transporté, pas selon la taille de l\'entreprise.',
+    'buyers.cta':'Parler à notre équipe ↗',
     'product.1.name':'Package de Conformité EUDR',
-    'product.1.desc':'Polygone GPS + vérification déforestation + PDF prêt DDS. Tout ce que la réglementation exige, vérifié par satellite.',
+    'product.1.desc':'Polygone GPS, vérification de déforestation, dossier prêt DDS — vérifié par satellite.',
     'product.2.name':'Score ESG par Exploitation',
-    'product.2.desc':'Score ESG à trois piliers : Environnemental, Social, Gouvernance. Satisfait le reporting Scope 3 de la CSRD.',
+    'product.2.desc':'Score ESG à trois piliers — Environnemental, Social, Gouvernance — pour le reporting Scope 3 de la CSRD.',
     'product.3.name':'Pack de Données de Diligence Raisonnée',
-    'product.3.desc':'Indicateurs de travail, vérification des droits fonciers, enregistrements de consentement. Prêt pour LkSG et CSDDD.',
+    'product.3.desc':'Indicateurs de travail, droits fonciers, enregistrements de consentement — prêt pour LkSG et CSDDD.',
     'producers.quote':'« La dignité est la liberté d\'agir,<br>le droit d\'être <em>reconnu,</em><br>et l\'égalité partagée par tout être humain. »',
     'producers.eyebrow':'Pour les producteurs',
     'producers.title':'Vos données.<br><em>Votre valeur.</em>',
-    'producers.body':'AgroDignity est la seule plateforme qui reverse les revenus des données directement au producteur. Ce que vos données génèrent sur les marchés européens vous revient — pas aux intermédiaires.',
+    'producers.body':'La seconde récolte de votre exploitation, ce sont ses données — captées, vendues, jamais restituées. AgroDignity les restitue : un revenu vérifié, plus la perspective que d\'autres ont déjà sur vous.',
     'producers.cta':'Nous contacter ↗',
     'pp.1.title':'Une visite. Toutes les données capturées.',
-    'pp.1.body':'Un technicien de terrain se rend une fois sur place. Toutes les données sont collectées dans un formulaire hors ligne — sans paperasse, sans répétition.',
+    'pp.1.body':'Une seule visite de terrain, une app hors ligne, sans paperasse répétée.',
     'pp.2.title':'Vous êtes propriétaire de vos données',
-    'pp.2.body':'Les producteurs conservent le contrôle total et peuvent retirer leur consentement à tout moment. La souveraineté des données est intégrée à la plateforme.',
-    'pp.3.title':'Les revenus des données vous reviennent',
-    'pp.3.body':'Une part de chaque transaction de données revient directement au producteur. Aucun intermédiaire n\'extrait de valeur à la source.',
-    'why.eyebrow':'Notre avantage',
-    'why.title':'Quatre raisons<br><em>pour lesquelles nous gagnons ce marché.</em>',
-    'why.1.label':'01 · Workflow natif terrain',
-    'why.1.title':'Conçu pour les petits agriculteurs, pas adapté d\'outils enterprise',
-    'why.1.body':'Notre app mobile offline-first est conçue pour les environnements à faible connectivité et la collecte en une seule visite. Les concurrents adaptent des outils enterprise. Nous avons construit depuis le terrain.',
-    'why.2.label':'02 · Droits sur les données du producteur',
-    'why.2.title':'Consentement, souveraineté et retrait — par conception',
-    'why.2.body':'Chaque point de données est collecté sous consentement explicite. Les agriculteurs peuvent se retirer à tout moment. La souveraineté des données est un engagement contractuel qu\'aucun outil générique ne peut reproduire.',
-    'why.3.label':'03 · Vérification satellitaire',
-    'why.3.title':'Pas des données autodéclarées — vérifiées indépendamment',
-    'why.3.body':'Chaque polygone est croisé avec des données satellitaires de déforestation. Le résultat — RÉUSSI, EN RÉVISION ou ÉCHOUÉ — est stocké avec une piste d\'audit inviolable.',
-    'why.4.label':'04 · Modèle de redistribution des revenus',
-    'why.4.title':'La seule plateforme qui restitue la valeur des données à son origine',
-    'why.4.body':'Une part de chaque transaction revient au producteur. Cela crée des relations durables qui génèrent de meilleures données et un réseau qu\'aucun concurrent ne peut reproduire.',
+    'pp.2.body':'Les producteurs détiennent de vrais droits de décision via le comité de gouvernance de leur propre coopérative — pas seulement un paiement dont quelqu\'un d\'autre a fixé le montant.',
+    'pp.3.title':'Le revenu vous revient',
+    'pp.3.body':'Une part fixe de chaque transaction revient au producteur qui a généré la donnée — avant le profit, avant les frais généraux.',
     'mission.eyebrow':'Mission · Vision',
     'mission.title':'Ce pour quoi nous nous battons.<br><em>Pourquoi ça compte.</em>',
     'mission.label':'Mission',
-    'mission.text':'Nous créons des ponts de connaissance et de technologie entre les acteurs du système alimentaire mondial — en générant les capacités pour que chaque acteur gère ses propres décisions et oriente son propre avenir.',
+    'mission.text':'Nous construisons l\'infrastructure qui permet aux petits producteurs de capter la valeur de leurs propres données.',
     'vision.label':'Vision',
-    'vision.text':'Être les pionniers de systèmes accessibles où les données des systèmes alimentaires génèrent de la valeur à leur origine — et restituent cette valeur aux personnes qui les ont créées.',
+    'vision.text':'Un système alimentaire où la perspective et le revenu reviennent tous deux à ceux qui cultivent la nourriture.',
     'traction.eyebrow':'Où nous en sommes',
-    'traction.title':'Exécution précoce.<br><em>Prochaines étapes claires.</em>',
-    'traction.1.label':'Pilote · Honduras',
-    'traction.1.value':'Workflow terrain validé',
-    'traction.1.desc':'Protocole de collecte de données testé avec des coopératives de café. Workflow app offline validé pour environnements à faible connectivité.',
-    'traction.2.label':'Pipeline · acheteurs UE',
-    'traction.2.value':'Conversations acheteurs actives',
-    'traction.2.desc':'Conversations en cours avec des importateurs européens de cacao et café visant l\'échéance EUDR de décembre 2026. Intégration DDS en développement.',
-    'traction.3.label':'Levée · Seed',
-    'traction.3.value':'Recherche de capital d\'amorçage',
-    'traction.3.desc':'Levée pour développer les opérations terrain en Amérique latine et intégrer les premiers acheteurs européens payants avant le T4 2026.',
+    'traction.title':'Exécution précoce.<br><em>Signatures réelles.</em>',
+    'traction.1.label':'Signé',
+    'traction.1.value':'MOU, Rome — avril 2026',
+    'traction.1.desc':'Accord d\'opérations de terrain avec la Fundación para la Investigación y el Desarrollo, et un accord de coopération technique avec la SAG du Honduras.',
+    'traction.2.label':'En pilote',
+    'traction.2.value':'1 300+ producteurs',
+    'traction.2.desc':'Deux coopératives caféières honduriennes, CAPUCAS et PROEXO, avec plus de 400 exploitations déjà vérifiées par GPS.',
+    'traction.3.label':'Validé',
+    'traction.3.value':'Revue académique indépendante',
+    'traction.3.desc':'Modèle de gouvernance en cours d\'évaluation par le programme Fair and Smart Data de l\'Université de Maastricht.',
     'team.eyebrow':'L\'équipe',
     'team.title':'Construite par des personnes qui connaissent<br><em>le terrain et la réglementation.</em>',
-    'team.1.desc':'Droit alimentaire international · Politique agricole · Expertise approfondie des cadres réglementaires européens et des systèmes alimentaires latino-américains.',
-    'team.2.desc':'Analyse de données · Infrastructure technologique · Architecte du pipeline de vérification satellitaire et de la plateforme de données terrain offline.',
-    'team.3.desc':'Systèmes agroalimentaires · Marchés durables · Basée à Trieste, Italie — pont entre les réseaux de producteurs en Amérique latine et les acheteurs européens.',
+    'team.1.desc':'25 ans dans la politique agricole internationale. Ancienne Représentante permanente adjointe du Honduras auprès de la FAO, du FIDA et du PAM à Rome. LL.M. en droit alimentaire mondial.',
+    'team.2.desc':'Ingénieur agro-industriel et consultant actif à la FAO. A coordonné 81 techniciens de terrain et la légalisation de plus de 2 000 coopératives rurales à PRONADERS, Honduras.',
+    'team.3.desc':'Chercheuse doctorale en économie circulaire, Université de Trieste. Dirige l\'accès au marché européen et la validation académique depuis l\'Italie.',
     'contact.eyebrow':'Nous contacter',
-    'contact.title':'Prêt à parler<br><em>EUDR — ou investissement ?</em>',
-    'contact.body':'Que vous soyez un importateur européen qui se prépare pour décembre 2026, ou un investisseur intéressé par l\'infrastructure de conformité — nous serions ravis d\'échanger.',
-    'contact.btn1':'Nous contacter ↗','contact.btn2':'Demande investisseur ↗',
+    'contact.title':'Construisons<br><em>quelque chose de digne.</em>',
+    'contact.body':'Que vous soyez importateur, coopérative, chercheur, ou simplement curieux de ce que nous construisons — nous serions ravis d\'échanger.',
+    'contact.btn1':'Nous contacter ↗','contact.btn2':'En savoir plus',
     'contact.meta':'Trieste, Italie · Rome, Italie · Tegucigalpa, Honduras',
     'footer.tagline':'La valeur des données, retournée à son origine',
     'footer.legal':'© 2026 AgroDignity Initiative · Tous droits réservés'
   },
   it: {
-    'nav.how':'Come funziona','nav.buyers':'Per gli acquirenti','nav.producers':'Per i produttori',
-    'nav.mission':'Missione','nav.team':'Team','nav.cta':'Contattaci',
-    'hero.eyebrow':'Infrastruttura di conformità EUDR · CSRD · LkSG',
+    'nav.model':'Perché AgroDignity','nav.how':'Come funziona','nav.buyers':'Per gli acquirenti','nav.producers':'Per i produttori',
+    'nav.team':'Team','nav.cta':'Contattaci',
+    'hero.eyebrow':'Infrastruttura di conformità EUDR · Caffè prima di tutto',
     'hero.title':'Dati agricoli<br><em>con dignità.</em><strong>Verificati all\'origine.</strong>',
-    'hero.body':'L\'applicazione dell\'EUDR inizia a dicembre 2026. Gli importatori europei hanno bisogno di dati verificati a livello aziendale — e i produttori meritano un giusto valore. AgroDignity offre entrambe le cose.',
-    'hero.btn1':'Richiedi una demo ↗','hero.btn2':'Scopri come funziona','hero.btn3':'Informazioni per investitori ↗',
+    'hero.body':'L\'applicazione dell\'EUDR inizia a dicembre 2026. Verifichiamo oggi le fattorie di caffè honduregne — costruito per estendersi al cacao e a ogni coltura regolamentata.',
+    'hero.btn1':'Per gli importatori UE ↗','hero.btn2':'Per i produttori ↗',
     'hero.visual.tag':'Verificato all\'origine',
     'hero.visual.quote':'«Dal raccolto al pacchetto di conformità — tracciabile, dignitoso, tuo.»',
-    'whynow.eyebrow':'Perché adesso',
-    'whynow.title':'La finestra<br>è <em>aperta adesso.</em>',
-    'whynow.sub':'L\'applicazione dell\'EUDR inizia a dicembre 2026. Ogni grande importatore europeo di cacao e caffè deve disporre di dati verificati a livello aziendale. La maggior parte non li ha.',
-    'num.1':'Applicazione EUDR per operatori grandi e medi — DDS a livello aziendale obbligatorio',
-    'num.2':'piccoli agricoltori nel mondo che producono materie prime regolamentate dall\'EUDR',
-    'num.3':'una piattaforma che copre simultaneamente EUDR, CSRD Scope 3 e LkSG',
-    'num.4':'proventi da dati restituiti ai produttori dagli strumenti esistenti — noi lo cambiamo',
+    'model.eyebrow':'Perché esiste AgroDignity',
+    'model.title':'Il muscolo<br><em>tra due pesi.</em>',
+    'model.quote':'La conoscenza senza reddito è un consiglio.<br>Il reddito senza conoscenza è carità.',
+    'model.card1.label':'Il peso del produttore',
+    'model.card1.text':'Provare l\'origine costa un lavoro che il piccolo produttore non viene mai pagato — e i dati che genera valgono più di quanto lui stesso arrivi a vedere.',
+    'model.card2.label':'Il peso dell\'importatore',
+    'model.card2.text':'Provare l\'origine sotto l\'EUDR pesa di più sugli operatori troppo piccoli per avere un ufficio conformità — con sanzioni fino al 4% del fatturato.',
+    'model.close':'AgroDignity si colloca tra i due. Un\'unica verifica, pagata una volta, risolve entrambi i pesi.',
     'how.eyebrow':'Come funziona',
     'how.title':'Tre passi.<br><em>Un pacchetto di conformità.</em>',
-    'how.body':'Dalla raccolta GPS sul campo a un PDF pronto per il DDS — completamente automatizzato, verificato via satellite.',
+    'how.body':'Dalla raccolta GPS a un file pronto per il DDS su EU TRACES NT — verificato via satellite, a partire dal caffè, costruito per qualsiasi coltura regolamentata.',
     'how.1.title':'Raccolta sul campo',
-    'how.1.body':'I tecnici di campo raccolgono tutti i dati richiesti per azienda tramite la nostra app mobile offline — posizione, indicatori di lavoro e consenso del produttore — tutto in una sola visita.',
+    'how.1.body':'Una sola visita. Un tecnico di campo registra i confini GPS, le pratiche e il consenso con un\'app offline — niente burocrazia, niente visite ripetute.',
     'how.2.title':'Verifica via satellite',
-    'how.2.body':'Il nostro sistema incrocia ogni azienda con dati satellitari sulla deforestazione. Controllo post-2020. SUPERATO / IN REVISIONE / RESPINTO con una traccia di audit a prova di manomissione.',
+    'how.2.body':'Ogni azienda viene verificata con dati satellitari sulla deforestazione successivi al 2020. SUPERATO, IN REVISIONE o RESPINTO — con una traccia di audit a prova di manomissione.',
     'how.3.title':'Consegna del pacchetto',
-    'how.3.body':'Un PDF pronto per il DDS con i tre pilastri ESG: Ambientale (EUDR), Sociale (LkSG/CSRD), Governance. Pronto per la presentazione in EU TRACES NT.',
+    'how.3.body':'Un file pronto per il DDS che copre EUDR, CSRD e LkSG — pronto per la presentazione in EU TRACES NT.',
     'buyers.eyebrow':'Per gli importatori europei',
     'buyers.title':'La tua catena di approvvigionamento.<br><em>Completamente documentata.</em>',
-    'buyers.body':'L\'EUDR richiede dati verificati per ogni azienda. Forniamo un pacchetto di conformità completo e pronto per l\'audit per azienda.',
-    'buyers.cta':'Richiedi una demo ↗',
+    'buyers.body':'L\'EUDR richiede dati di geolocalizzazione e deforestazione verificati per azienda. Forniamo un pacchetto pronto per l\'audit — a prezzo per container movimentato, non per dimensione dell\'azienda.',
+    'buyers.cta':'Parla con il nostro team ↗',
     'product.1.name':'Pacchetto di Conformità EUDR',
-    'product.1.desc':'Poligono GPS + verifica deforestazione + PDF pronto DDS. Tutto ciò che il regolamento richiede, verificato via satellite.',
+    'product.1.desc':'Poligono GPS, verifica deforestazione, file pronto DDS — verificato via satellite.',
     'product.2.name':'Punteggio ESG per Azienda',
-    'product.2.desc':'Punteggio ESG a tre pilastri: Ambientale, Sociale, Governance. Soddisfa il reporting Scope 3 della CSRD.',
+    'product.2.desc':'Punteggio ESG a tre pilastri — Ambientale, Sociale, Governance — per il reporting Scope 3 della CSRD.',
     'product.3.name':'Pacchetto Dati di Due Diligence',
-    'product.3.desc':'Indicatori di lavoro, verifica del diritto fondiario, registrazioni del consenso. Pronto per LkSG e CSDDD.',
+    'product.3.desc':'Indicatori di lavoro, diritto fondiario, registrazioni del consenso — pronto per LkSG e CSDDD.',
     'producers.quote':'«La dignità è la libertà di agire,<br>il diritto di essere <em>riconosciuti,</em><br>e l\'uguaglianza condivisa da ogni essere umano.»',
     'producers.eyebrow':'Per i produttori',
     'producers.title':'I tuoi dati.<br><em>Il tuo valore.</em>',
-    'producers.body':'AgroDignity è l\'unica piattaforma che indirizza i proventi dei dati direttamente al produttore. Ciò che i tuoi dati guadagnano nei mercati europei torna a te — non agli intermediari.',
+    'producers.body':'Il secondo raccolto della tua azienda sono i suoi dati — raccolti, venduti, mai restituiti. AgroDignity li restituisce: reddito verificato, più la conoscenza che altri hanno già su di te.',
     'producers.cta':'Contattaci ↗',
     'pp.1.title':'Una visita. Tutti i dati raccolti.',
-    'pp.1.body':'Un tecnico di campo visita una volta. Tutti i dati vengono raccolti in un unico modulo offline — nessuna burocrazia, nessuna ripetizione.',
+    'pp.1.body':'Una sola visita sul campo, app offline, niente burocrazia ripetuta.',
     'pp.2.title':'Sei proprietario dei tuoi dati',
-    'pp.2.body':'I produttori mantengono il pieno controllo e possono revocare il consenso in qualsiasi momento. La sovranità dei dati è integrata nella piattaforma.',
-    'pp.3.title':'I proventi dei dati tornano a te',
-    'pp.3.body':'Una quota di ogni transazione di dati va direttamente al produttore che li ha generati. Nessun intermediario estrae valore alla fonte.',
-    'why.eyebrow':'Il nostro vantaggio',
-    'why.title':'Quattro ragioni<br><em>per cui vinciamo questo mercato.</em>',
-    'why.1.label':'01 · Workflow nativo del campo',
-    'why.1.title':'Costruito per piccoli agricoltori, non adattato da strumenti enterprise',
-    'why.1.body':'La nostra app mobile offline-first è progettata per ambienti a bassa connettività e raccolta in una singola visita. I concorrenti adattano strumenti enterprise. Noi abbiamo costruito dal campo.',
-    'why.2.label':'02 · Diritti sui dati del produttore',
-    'why.2.title':'Consenso, sovranità e recesso — by design',
-    'why.2.body':'Ogni punto dati viene raccolto sotto consenso esplicito. Gli agricoltori possono ritirarsi in qualsiasi momento. La sovranità dei dati è un impegno contrattuale che nessuno strumento generico può replicare.',
-    'why.3.label':'03 · Verifica satellitare',
-    'why.3.title':'Non dati autodichiarati — verificati in modo indipendente',
-    'why.3.body':'Ogni poligono aziendale viene incrociato con dati satellitari sulla deforestazione. Il risultato — SUPERATO, IN REVISIONE o RESPINTO — è archiviato con una traccia di audit a prova di manomissione.',
-    'why.4.label':'04 · Modello di ridistribuzione dei ricavi',
-    'why.4.title':'L\'unica piattaforma che restituisce il valore dei dati alla sua origine',
-    'why.4.body':'Una quota di ogni transazione torna al produttore. Questo costruisce relazioni durature che generano dati migliori e una rete che nessun concorrente può replicare.',
+    'pp.2.body':'I produttori mantengono veri diritti decisionali tramite il comitato di governance della propria cooperativa — non solo un pagamento il cui importo ha deciso qualcun altro.',
+    'pp.3.title':'Il reddito torna a te',
+    'pp.3.body':'Una quota fissa di ogni transazione torna al produttore che ha generato il dato — prima del profitto, prima delle spese generali.',
     'mission.eyebrow':'Missione · Visione',
     'mission.title':'Ciò per cui lottiamo.<br><em>Perché è importante.</em>',
     'mission.label':'Missione',
-    'mission.text':'Costruiamo ponti di conoscenza e tecnologia tra gli attori del sistema alimentare globale — generando le capacità affinché ogni attore gestisca le proprie decisioni e diriga il proprio futuro.',
+    'mission.text':'Costruiamo l\'infrastruttura che permette ai piccoli produttori di catturare il valore dei propri dati.',
     'vision.label':'Visione',
-    'vision.text':'Essere i pionieri di sistemi accessibili in cui i dati dei sistemi alimentari generino valore alla loro origine — e restituiscano quel valore alle persone che li hanno creati.',
+    'vision.text':'Un sistema alimentare in cui conoscenza e reddito tornano entrambi a chi coltiva il cibo.',
     'traction.eyebrow':'Dove siamo',
-    'traction.title':'Esecuzione iniziale.<br><em>Prossimi passi chiari.</em>',
-    'traction.1.label':'Pilota · Honduras',
-    'traction.1.value':'Workflow sul campo validato',
-    'traction.1.desc':'Protocollo di raccolta dati testato con cooperative di caffè. Workflow app offline validato per ambienti a bassa connettività.',
-    'traction.2.label':'Pipeline · acquirenti UE',
-    'traction.2.value':'Conversazioni attive con acquirenti',
-    'traction.2.desc':'Conversazioni in corso con importatori europei di cacao e caffè che puntano alla scadenza EUDR di dicembre 2026. Integrazione DDS in sviluppo.',
-    'traction.3.label':'Raccolta fondi · Seed',
-    'traction.3.value':'In cerca di capitale seed',
-    'traction.3.desc':'Raccolta per scalare le operazioni sul campo in America Latina e acquisire i primi acquirenti europei paganti prima del Q4 2026.',
+    'traction.title':'Esecuzione iniziale.<br><em>Firme reali.</em>',
+    'traction.1.label':'Firmato',
+    'traction.1.value':'MOU, Roma — aprile 2026',
+    'traction.1.desc':'Accordo di operazioni sul campo con la Fundación para la Investigación y el Desarrollo, più un accordo di cooperazione tecnica con la SAG dell\'Honduras.',
+    'traction.2.label':'In pilota',
+    'traction.2.value':'1.300+ produttori',
+    'traction.2.desc':'Due cooperative di caffè honduregne, CAPUCAS e PROEXO, con oltre 400 aziende già verificate via GPS.',
+    'traction.3.label':'Validato',
+    'traction.3.value':'Revisione accademica indipendente',
+    'traction.3.desc':'Modello di governance in valutazione presso il programma Fair and Smart Data dell\'Università di Maastricht.',
     'team.eyebrow':'Il team',
     'team.title':'Costruito da persone che conoscono<br><em>il campo e la normativa.</em>',
-    'team.1.desc':'Diritto alimentario internazionale · Politica agricola · Profonda competenza nei quadri normativi dell\'UE e nei sistemi alimentari latinoamericani.',
-    'team.2.desc':'Analisi dei dati · Infrastruttura tecnologica · Architetto del pipeline di verifica satellitare e della piattaforma dati di campo offline.',
-    'team.3.desc':'Sistemi agroalimentari · Mercati sostenibili · Basata a Trieste, Italia — ponte tra le reti di produttori in America Latina e gli acquirenti europei.',
+    'team.1.desc':'25 anni di politica agricola internazionale. Ex Rappresentante Permanente Alterna dell\'Honduras presso FAO, IFAD e WFP a Roma. LL.M. in Diritto Alimentare Globale.',
+    'team.2.desc':'Ingegnere agroindustriale e consulente attivo FAO. Ha coordinato 81 tecnici di campo e la legalizzazione di oltre 2.000 cooperative rurali presso PRONADERS, Honduras.',
+    'team.3.desc':'Ricercatrice di dottorato in economia circolare, Università di Trieste. Guida l\'accesso al mercato europeo e la validazione accademica dall\'Italia.',
     'contact.eyebrow':'Contattaci',
-    'contact.title':'Pronto a parlare<br><em>di EUDR — o investire?</em>',
-    'contact.body':'Che tu sia un importatore europeo che si prepara per dicembre 2026, o un investitore interessato all\'infrastruttura di conformità — ci farebbe piacere connetterci.',
-    'contact.btn1':'Contattaci ↗','contact.btn2':'Richiesta investitori ↗',
+    'contact.title':'Costruiamo<br><em>qualcosa di dignitoso.</em>',
+    'contact.body':'Che tu sia un importatore, una cooperativa, un ricercatore, o semplicemente curioso di ciò che stiamo costruendo — ci farebbe piacere sentirti.',
+    'contact.btn1':'Contattaci ↗','contact.btn2':'Scopri di più',
     'contact.meta':'Trieste, Italia · Roma, Italia · Tegucigalpa, Honduras',
     'footer.tagline':'Il valore dei dati, restituito alla sua origine',
     'footer.legal':'© 2026 AgroDignity Initiative · Tutti i diritti riservati'
