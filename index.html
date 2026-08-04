@@ -154,6 +154,13 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
   line-height: 1.8; max-width: 500px;
   margin-bottom: 40px;
 }
+.hero-epigraph {
+  font-family: var(--font-serif);
+  font-size: 14px; font-style: italic;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6; max-width: 420px;
+  margin: -16px 0 32px;
+}
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* Buttons */
@@ -370,40 +377,6 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
 
 /* ─── PRODUCERS ─── */
 .producers-section { background: var(--cream); }
-.producers-hero {
-  height: 72vh; min-height: 480px;
-  position: relative; overflow: hidden;
-}
-.producers-photo {
-  position: absolute; inset: 0;
-  background-color: #2c3d2a;
-  background-image: url('https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?auto=format&fit=crop&w=1600&q=80');
-  background-size: cover; background-position: center 25%;
-}
-.producers-photo::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(
-    100deg,
-    rgba(28,43,58,0.82) 0%,
-    rgba(28,43,58,0.45) 55%,
-    rgba(28,43,58,0.1) 100%
-  );
-}
-.producers-quote-wrap {
-  position: absolute; inset: 0; z-index: 2;
-  display: flex; align-items: center;
-  padding: 60px var(--gut);
-  max-width: calc(var(--max) + 2 * var(--gut));
-  margin: 0 auto; left: 0; right: 0;
-}
-.producers-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(32px, 4.5vw, 64px);
-  font-weight: 300; font-style: italic;
-  color: var(--white); line-height: 1.18; max-width: 680px;
-}
-.producers-quote em { font-style: normal; color: var(--sky); }
 .producers-body {
   padding: 80px var(--gut);
   display: grid; grid-template-columns: 1fr 1fr;
@@ -429,52 +402,6 @@ nav.scrolled .nav-links a:hover { color: var(--navy); }
   color: var(--navy); margin-bottom: 6px;
 }
 .pp-body { font-size: 14px; color: var(--soft); line-height: 1.75; }
-
-/* ─── MUSCLE (TWO BURDENS) ─── */
-.muscle-section { padding: 100px var(--gut); background: var(--cream2); text-align: center; }
-.muscle-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 3.4vw, 42px);
-  font-weight: 300; font-style: italic;
-  color: var(--navy); line-height: 1.4;
-  max-width: 760px; margin: 8px auto 56px;
-}
-.muscle-section .mv-grid {
-  text-align: left;
-  max-width: var(--max); margin: 0 auto;
-}
-.muscle-close {
-  font-size: 16px; color: var(--soft);
-  line-height: 1.8; max-width: 540px; margin: 40px auto 0;
-}
-
-/* ─── MISSION ─── */
-.mission-section { padding: 100px var(--gut); background: var(--cream); }
-.mv-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 24px; margin: 48px 0 0;
-}
-.mv-card {
-  background: var(--navy);
-  border-radius: var(--r3); padding: 44px 48px;
-  transition: transform 0.3s;
-}
-.mv-card:hover { transform: translateY(-4px); }
-.mv-label {
-  font-size: 11px; font-weight: 700;
-  color: var(--sky); letter-spacing: 0.16em; text-transform: uppercase;
-  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
-}
-.mv-label::before {
-  content: ''; display: block;
-  width: 20px; height: 2px; background: var(--sky);
-}
-.mv-text {
-  font-family: var(--font-serif);
-  font-size: 20px; font-weight: 300;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.75; font-style: italic;
-}
 
 /* ─── TRACTION ─── */
 .traction-section { padding: 100px var(--gut); background: var(--white); }
@@ -664,17 +591,13 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
-  .num-grid { grid-template-columns: repeat(2,1fr); }
   .how-grid { grid-template-columns: 1fr; }
   .how-card { border-right: none; border-bottom: 1px solid var(--sand); }
   .how-card:last-child { border-bottom: none; }
   .buyers-inner { grid-template-columns: 1fr; }
   .producers-body { grid-template-columns: 1fr; }
-  .mv-grid { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
   .traction-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
-  .numbers-header { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -705,7 +628,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <span class="adg-sub">AgroDignity Global</span>
   </div>
   <ul class="nav-links">
-    <li><a href="#model" data-i18n="nav.model">Why AgroDignity</a></li>
     <li><a href="#how" data-i18n="nav.how">How it works</a></li>
     <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
     <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
@@ -725,7 +647,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="#model" data-i18n="nav.model">Why AgroDignity</a></li>
     <li><a href="#how" data-i18n="nav.how">How it works</a></li>
     <li><a href="#buyers" data-i18n="nav.buyers">For buyers</a></li>
     <li><a href="#producers" data-i18n="nav.producers">For producers</a></li>
@@ -757,6 +678,7 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
       <p class="hero-body" data-i18n="hero.body">
         EUDR enforcement begins December 2026. We verify Honduran coffee farms today — built to extend to cacao and every regulated crop next.
       </p>
+      <p class="hero-epigraph" data-i18n-html="hero.epigraph">Insight without income is advice.<br>Income without insight is charity.</p>
       <div class="hero-actions">
         <a href="#buyers" class="btn btn-green" data-i18n="hero.btn1">For EU importers ↗</a>
         <a href="#producers" class="btn btn-ghost" data-i18n="hero.btn2">For producers ↗</a>
@@ -791,26 +713,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
     <span class="ticker-item">TRACES NT ready · <span class="accent">DDS on submission</span></span>
   </div>
 </div>
-
-<!-- ══ THE MUSCLE BETWEEN TWO BURDENS ══ -->
-<section class="muscle-section" id="model">
-  <div class="container">
-    <div class="section-eyebrow reveal" style="justify-content:center" data-i18n="model.eyebrow">Why AgroDignity exists</div>
-    <h2 class="section-title reveal" data-i18n-html="model.title">The muscle<br><em>between two burdens.</em></h2>
-    <p class="muscle-quote reveal" data-i18n-html="model.quote">Insight without income is advice.<br>Income without insight is charity.</p>
-    <div class="mv-grid">
-      <div class="mv-card reveal">
-        <div class="mv-label" data-i18n="model.card1.label">The producer's burden</div>
-        <div class="mv-text" data-i18n="model.card1.text">Proving origin costs labor the smallholder is never paid for — and the data it produces is worth more than they ever see.</div>
-      </div>
-      <div class="mv-card reveal d1">
-        <div class="mv-label" data-i18n="model.card2.label">The importer's burden</div>
-        <div class="mv-text" data-i18n="model.card2.text">Proving origin under EUDR falls hardest on operators too small to carry a compliance department — with penalties of up to 4% of turnover.</div>
-      </div>
-    </div>
-    <p class="muscle-close reveal" data-i18n="model.close">AgroDignity sits between them. One verification, paid once, discharges both.</p>
-  </div>
-</section>
 
 <!-- ══ HOW IT WORKS ══ -->
 <section class="how-section" id="how">
@@ -916,17 +818,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
 
 <!-- ══ FOR PRODUCERS ══ -->
 <section class="producers-section" id="producers">
-  <div class="producers-hero">
-    <div class="producers-photo"></div>
-    <div class="producers-quote-wrap">
-      <p class="producers-quote" data-i18n-html="producers.quote">
-        "Dignity is the freedom to act,<br>
-        the right to be <em>recognized,</em><br>
-        and the equality shared by every human being."
-      </p>
-    </div>
-  </div>
-
   <div class="producers-body">
     <div>
       <div class="section-eyebrow reveal" data-i18n="producers.eyebrow">For producers</div>
@@ -955,25 +846,6 @@ nav.scrolled .lang-btn.active { color: var(--navy); background: var(--cream2); }
           <div class="pp-title" data-i18n="pp.3.title">Revenue returns to you</div>
           <div class="pp-body" data-i18n="pp.3.body">A fixed share of every transaction goes back to the producer who generated the data — before profit, before overhead.</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ MISSION ══ -->
-<section class="mission-section" id="mission">
-  <div class="container">
-    <div class="section-eyebrow reveal" data-i18n="mission.eyebrow">Mission · Vision</div>
-    <h2 class="section-title reveal" data-i18n-html="mission.title">What we stand for.<br><em>Why it matters.</em></h2>
-    <div class="mv-grid">
-      <div class="mv-card reveal">
-        <div class="mv-label" data-i18n="mission.label">Mission</div>
-        <div class="mv-text" data-i18n="mission.text">We build the infrastructure that lets smallholders capture the value of their own data.</div>
-      </div>
-      <div class="mv-card reveal d1">
-        <div class="mv-label" data-i18n="vision.label">Vision</div>
-        <div class="mv-text" data-i18n="vision.text">A food system where insight and income both flow back to the people who grow the food.</div>
       </div>
     </div>
   </div>
@@ -1099,22 +971,15 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 /* ── TRANSLATIONS ── */
 const translations = {
   en: {
-    'nav.model':'Why AgroDignity','nav.how':'How it works','nav.buyers':'For buyers','nav.producers':'For producers',
+    'nav.how':'How it works','nav.buyers':'For buyers','nav.producers':'For producers',
     'nav.team':'Team','nav.cta':'Get in touch',
     'hero.eyebrow':'EUDR compliance infrastructure · Coffee first',
     'hero.title':'Farm data<br><em>with dignity.</em><strong>Verified at origin.</strong>',
     'hero.body':'EUDR enforcement begins December 2026. We verify Honduran coffee farms today — built to extend to cacao and every regulated crop next.',
+    'hero.epigraph':'Insight without income is advice.<br>Income without insight is charity.',
     'hero.btn1':'For EU importers ↗','hero.btn2':'For producers ↗',
     'hero.visual.tag':'Verified at origin',
     'hero.visual.quote':'"From harvest to compliance package — traceable, dignified, yours."',
-    'model.eyebrow':'Why AgroDignity exists',
-    'model.title':'The muscle<br><em>between two burdens.</em>',
-    'model.quote':'Insight without income is advice.<br>Income without insight is charity.',
-    'model.card1.label':'The producer\'s burden',
-    'model.card1.text':'Proving origin costs labor the smallholder is never paid for — and the data it produces is worth more than they ever see.',
-    'model.card2.label':'The importer\'s burden',
-    'model.card2.text':'Proving origin under EUDR falls hardest on operators too small to carry a compliance department — with penalties of up to 4% of turnover.',
-    'model.close':'AgroDignity sits between them. One verification, paid once, discharges both.',
     'how.eyebrow':'How it works',
     'how.title':'Three steps.<br><em>One compliance package.</em>',
     'how.body':'From GPS capture to a DDS-ready file for EU TRACES NT — satellite-verified, starting with coffee, built for any regulated crop.',
@@ -1134,7 +999,6 @@ const translations = {
     'product.2.desc':'Three-pillar ESG score — Environmental, Social, Governance — for CSRD Scope 3 reporting.',
     'product.3.name':'Due Diligence Data Pack',
     'product.3.desc':'Labor indicators, land tenure, consent records — ready for LkSG and CSDDD.',
-    'producers.quote':'"Dignity is the freedom to act,<br>the right to be <em>recognized,</em><br>and the equality shared by every human being."',
     'producers.eyebrow':'For producers',
     'producers.title':'Your data.<br><em>Your value.</em>',
     'producers.body':'Your farm\'s second harvest is its data — captured, sold, and never returned. AgroDignity returns it: verified income, plus the insight others already have about you.',
@@ -1145,12 +1009,6 @@ const translations = {
     'pp.2.body':'Producers hold real decision rights through their cooperative\'s own governance committee — not just a payment someone else set the size of.',
     'pp.3.title':'Revenue returns to you',
     'pp.3.body':'A fixed share of every transaction goes back to the producer who generated the data — before profit, before overhead.',
-    'mission.eyebrow':'Mission · Vision',
-    'mission.title':'What we stand for.<br><em>Why it matters.</em>',
-    'mission.label':'Mission',
-    'mission.text':'We build the infrastructure that lets smallholders capture the value of their own data.',
-    'vision.label':'Vision',
-    'vision.text':'A food system where insight and income both flow back to the people who grow the food.',
     'traction.eyebrow':'Where we are',
     'traction.title':'Early execution.<br><em>Real signatures.</em>',
     'traction.1.label':'Signed',
@@ -1176,22 +1034,15 @@ const translations = {
     'footer.legal':'© 2026 AgroDignity Initiative · All rights reserved'
   },
   es: {
-    'nav.model':'Por qué AgroDignity','nav.how':'Cómo funciona','nav.buyers':'Para compradores','nav.producers':'Para productores',
+    'nav.how':'Cómo funciona','nav.buyers':'Para compradores','nav.producers':'Para productores',
     'nav.team':'Equipo','nav.cta':'Contáctanos',
     'hero.eyebrow':'Infraestructura de cumplimiento EUDR · Café primero',
     'hero.title':'Datos del campo<br><em>con dignidad.</em><strong>Verificados en origen.</strong>',
     'hero.body':'La EUDR entra en vigor en diciembre de 2026. Verificamos fincas cafetaleras hondureñas hoy — construido para extenderse al cacao y a cada cultivo regulado.',
+    'hero.epigraph':'La perspectiva sin ingreso es un consejo.<br>El ingreso sin perspectiva es caridad.',
     'hero.btn1':'Para importadores de la UE ↗','hero.btn2':'Para productores ↗',
     'hero.visual.tag':'Verificado en origen',
     'hero.visual.quote':'"De la cosecha al paquete de cumplimiento — trazable, digno, tuyo."',
-    'model.eyebrow':'Por qué existe AgroDignity',
-    'model.title':'El músculo<br><em>entre dos cargas.</em>',
-    'model.quote':'La perspectiva sin ingreso es un consejo.<br>El ingreso sin perspectiva es caridad.',
-    'model.card1.label':'La carga del productor',
-    'model.card1.text':'Probar el origen cuesta trabajo que el pequeño productor nunca cobra — y los datos que genera valen más de lo que él mismo llega a ver.',
-    'model.card2.label':'La carga del importador',
-    'model.card2.text':'Probar el origen bajo la EUDR recae con más fuerza sobre operadores demasiado pequeños para tener un departamento de cumplimiento — con sanciones de hasta el 4% de la facturación.',
-    'model.close':'AgroDignity se sitúa entre ambos. Una sola verificación, pagada una vez, resuelve las dos cargas.',
     'how.eyebrow':'Cómo funciona',
     'how.title':'Tres pasos.<br><em>Un paquete de cumplimiento.</em>',
     'how.body':'Desde la captura GPS hasta un archivo listo para DDS en EU TRACES NT — verificado por satélite, comenzando con café, construido para cualquier cultivo regulado.',
@@ -1211,7 +1062,6 @@ const translations = {
     'product.2.desc':'Puntuación ESG de tres pilares — Ambiental, Social, Gobernanza — para el reporte de Alcance 3 de CSRD.',
     'product.3.name':'Paquete de Datos de Debida Diligencia',
     'product.3.desc':'Indicadores laborales, tenencia de tierra, registros de consentimiento — listo para LkSG y CSDDD.',
-    'producers.quote':'"La dignidad es la libertad de actuar,<br>el derecho a ser <em>reconocido,</em><br>y la igualdad que pertenece a todo ser humano."',
     'producers.eyebrow':'Para productores',
     'producers.title':'Tus datos.<br><em>Tu valor.</em>',
     'producers.body':'La segunda cosecha de tu finca son sus datos — capturados, vendidos, y nunca devueltos. AgroDignity los devuelve: ingreso verificado, más la perspectiva que otros ya tienen sobre ti.',
@@ -1222,12 +1072,6 @@ const translations = {
     'pp.2.body':'Los productores mantienen derechos de decisión reales a través del comité de gobernanza de su propia cooperativa — no solo un pago cuyo monto decidió alguien más.',
     'pp.3.title':'Los ingresos regresan a ti',
     'pp.3.body':'Una parte fija de cada transacción regresa al productor que generó los datos — antes de la utilidad, antes de los gastos generales.',
-    'mission.eyebrow':'Misión · Visión',
-    'mission.title':'Lo que defendemos.<br><em>Por qué importa.</em>',
-    'mission.label':'Misión',
-    'mission.text':'Construimos la infraestructura que permite a los pequeños productores capturar el valor de sus propios datos.',
-    'vision.label':'Visión',
-    'vision.text':'Un sistema alimentario donde la perspectiva y el ingreso regresen a quienes cultivan los alimentos.',
     'traction.eyebrow':'Dónde estamos',
     'traction.title':'Ejecución temprana.<br><em>Firmas reales.</em>',
     'traction.1.label':'Firmado',
@@ -1253,22 +1097,15 @@ const translations = {
     'footer.legal':'© 2026 AgroDignity Initiative · Todos los derechos reservados'
   },
   fr: {
-    'nav.model':'Pourquoi AgroDignity','nav.how':'Comment ça marche','nav.buyers':'Pour les acheteurs','nav.producers':'Pour les producteurs',
+    'nav.how':'Comment ça marche','nav.buyers':'Pour les acheteurs','nav.producers':'Pour les producteurs',
     'nav.team':'Équipe','nav.cta':'Nous contacter',
     'hero.eyebrow':'Infrastructure de conformité EUDR · Café d\'abord',
     'hero.title':'Données agricoles<br><em>avec dignité.</em><strong>Vérifiées à l\'origine.</strong>',
     'hero.body':'L\'application de l\'EUDR commence en décembre 2026. Nous vérifions aujourd\'hui les fermes caféières du Honduras — conçu pour s\'étendre au cacao et à toute culture réglementée.',
+    'hero.epigraph':'La perspective sans revenu n\'est qu\'un conseil.<br>Le revenu sans perspective n\'est que charité.',
     'hero.btn1':'Pour les importateurs UE ↗','hero.btn2':'Pour les producteurs ↗',
     'hero.visual.tag':'Vérifié à l\'origine',
     'hero.visual.quote':'« De la récolte au dossier de conformité — traçable, digne, à vous. »',
-    'model.eyebrow':'Pourquoi AgroDignity existe',
-    'model.title':'Le muscle<br><em>entre deux charges.</em>',
-    'model.quote':'La perspective sans revenu n\'est qu\'un conseil.<br>Le revenu sans perspective n\'est que charité.',
-    'model.card1.label':'La charge du producteur',
-    'model.card1.text':'Prouver l\'origine coûte un travail que le petit producteur n\'est jamais payé — et les données qu\'il génère valent plus que ce qu\'il en verra jamais.',
-    'model.card2.label':'La charge de l\'importateur',
-    'model.card2.text':'Prouver l\'origine sous l\'EUDR pèse le plus sur les opérateurs trop petits pour avoir un service conformité — avec des sanctions pouvant atteindre 4% du chiffre d\'affaires.',
-    'model.close':'AgroDignity se place entre les deux. Une seule vérification, payée une fois, résout les deux charges.',
     'how.eyebrow':'Comment ça marche',
     'how.title':'Trois étapes.<br><em>Un package de conformité.</em>',
     'how.body':'De la capture GPS à un dossier prêt pour le DDS sur EU TRACES NT — vérifié par satellite, en commençant par le café, conçu pour toute culture réglementée.',
@@ -1288,7 +1125,6 @@ const translations = {
     'product.2.desc':'Score ESG à trois piliers — Environnemental, Social, Gouvernance — pour le reporting Scope 3 de la CSRD.',
     'product.3.name':'Pack de Données de Diligence Raisonnée',
     'product.3.desc':'Indicateurs de travail, droits fonciers, enregistrements de consentement — prêt pour LkSG et CSDDD.',
-    'producers.quote':'« La dignité est la liberté d\'agir,<br>le droit d\'être <em>reconnu,</em><br>et l\'égalité partagée par tout être humain. »',
     'producers.eyebrow':'Pour les producteurs',
     'producers.title':'Vos données.<br><em>Votre valeur.</em>',
     'producers.body':'La seconde récolte de votre exploitation, ce sont ses données — captées, vendues, jamais restituées. AgroDignity les restitue : un revenu vérifié, plus la perspective que d\'autres ont déjà sur vous.',
@@ -1299,12 +1135,6 @@ const translations = {
     'pp.2.body':'Les producteurs détiennent de vrais droits de décision via le comité de gouvernance de leur propre coopérative — pas seulement un paiement dont quelqu\'un d\'autre a fixé le montant.',
     'pp.3.title':'Le revenu vous revient',
     'pp.3.body':'Une part fixe de chaque transaction revient au producteur qui a généré la donnée — avant le profit, avant les frais généraux.',
-    'mission.eyebrow':'Mission · Vision',
-    'mission.title':'Ce pour quoi nous nous battons.<br><em>Pourquoi ça compte.</em>',
-    'mission.label':'Mission',
-    'mission.text':'Nous construisons l\'infrastructure qui permet aux petits producteurs de capter la valeur de leurs propres données.',
-    'vision.label':'Vision',
-    'vision.text':'Un système alimentaire où la perspective et le revenu reviennent tous deux à ceux qui cultivent la nourriture.',
     'traction.eyebrow':'Où nous en sommes',
     'traction.title':'Exécution précoce.<br><em>Signatures réelles.</em>',
     'traction.1.label':'Signé',
@@ -1330,22 +1160,15 @@ const translations = {
     'footer.legal':'© 2026 AgroDignity Initiative · Tous droits réservés'
   },
   it: {
-    'nav.model':'Perché AgroDignity','nav.how':'Come funziona','nav.buyers':'Per gli acquirenti','nav.producers':'Per i produttori',
+    'nav.how':'Come funziona','nav.buyers':'Per gli acquirenti','nav.producers':'Per i produttori',
     'nav.team':'Team','nav.cta':'Contattaci',
     'hero.eyebrow':'Infrastruttura di conformità EUDR · Caffè prima di tutto',
     'hero.title':'Dati agricoli<br><em>con dignità.</em><strong>Verificati all\'origine.</strong>',
     'hero.body':'L\'applicazione dell\'EUDR inizia a dicembre 2026. Verifichiamo oggi le fattorie di caffè honduregne — costruito per estendersi al cacao e a ogni coltura regolamentata.',
+    'hero.epigraph':'La conoscenza senza reddito è un consiglio.<br>Il reddito senza conoscenza è carità.',
     'hero.btn1':'Per gli importatori UE ↗','hero.btn2':'Per i produttori ↗',
     'hero.visual.tag':'Verificato all\'origine',
     'hero.visual.quote':'«Dal raccolto al pacchetto di conformità — tracciabile, dignitoso, tuo.»',
-    'model.eyebrow':'Perché esiste AgroDignity',
-    'model.title':'Il muscolo<br><em>tra due pesi.</em>',
-    'model.quote':'La conoscenza senza reddito è un consiglio.<br>Il reddito senza conoscenza è carità.',
-    'model.card1.label':'Il peso del produttore',
-    'model.card1.text':'Provare l\'origine costa un lavoro che il piccolo produttore non viene mai pagato — e i dati che genera valgono più di quanto lui stesso arrivi a vedere.',
-    'model.card2.label':'Il peso dell\'importatore',
-    'model.card2.text':'Provare l\'origine sotto l\'EUDR pesa di più sugli operatori troppo piccoli per avere un ufficio conformità — con sanzioni fino al 4% del fatturato.',
-    'model.close':'AgroDignity si colloca tra i due. Un\'unica verifica, pagata una volta, risolve entrambi i pesi.',
     'how.eyebrow':'Come funziona',
     'how.title':'Tre passi.<br><em>Un pacchetto di conformità.</em>',
     'how.body':'Dalla raccolta GPS a un file pronto per il DDS su EU TRACES NT — verificato via satellite, a partire dal caffè, costruito per qualsiasi coltura regolamentata.',
@@ -1365,7 +1188,6 @@ const translations = {
     'product.2.desc':'Punteggio ESG a tre pilastri — Ambientale, Sociale, Governance — per il reporting Scope 3 della CSRD.',
     'product.3.name':'Pacchetto Dati di Due Diligence',
     'product.3.desc':'Indicatori di lavoro, diritto fondiario, registrazioni del consenso — pronto per LkSG e CSDDD.',
-    'producers.quote':'«La dignità è la libertà di agire,<br>il diritto di essere <em>riconosciuti,</em><br>e l\'uguaglianza condivisa da ogni essere umano.»',
     'producers.eyebrow':'Per i produttori',
     'producers.title':'I tuoi dati.<br><em>Il tuo valore.</em>',
     'producers.body':'Il secondo raccolto della tua azienda sono i suoi dati — raccolti, venduti, mai restituiti. AgroDignity li restituisce: reddito verificato, più la conoscenza che altri hanno già su di te.',
@@ -1376,12 +1198,6 @@ const translations = {
     'pp.2.body':'I produttori mantengono veri diritti decisionali tramite il comitato di governance della propria cooperativa — non solo un pagamento il cui importo ha deciso qualcun altro.',
     'pp.3.title':'Il reddito torna a te',
     'pp.3.body':'Una quota fissa di ogni transazione torna al produttore che ha generato il dato — prima del profitto, prima delle spese generali.',
-    'mission.eyebrow':'Missione · Visione',
-    'mission.title':'Ciò per cui lottiamo.<br><em>Perché è importante.</em>',
-    'mission.label':'Missione',
-    'mission.text':'Costruiamo l\'infrastruttura che permette ai piccoli produttori di catturare il valore dei propri dati.',
-    'vision.label':'Visione',
-    'vision.text':'Un sistema alimentare in cui conoscenza e reddito tornano entrambi a chi coltiva il cibo.',
     'traction.eyebrow':'Dove siamo',
     'traction.title':'Esecuzione iniziale.<br><em>Firme reali.</em>',
     'traction.1.label':'Firmato',
